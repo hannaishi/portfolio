@@ -121,6 +121,7 @@ li {
 ------------------------------- */
 #footer {
     text-align: center;
+    padding: 5%;
 }
 #footer a {
     color: #fff;
