@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body {
+    margin: 0 auto;
+    font-size: 0.875rem;
+    background-color: #eac67fb4;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1032px;
+    margin: 80px auto;
+}
+.en {
+    margin-bottom: 10px;
+    font-size: 2.25rem;
+    letter-spacing: 0.3em;
+    display: block;
+}
+.section-title:after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+}
+.section-title .ja {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 36px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* HEADER
+------------------------------- */
+#header {
+    width: 100%;
+    height: 130vh;
+    background-image: url(../img/item2.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: right;
+    padding: 150px 200px;
+    color: #fff;
+}
+#header .site-title {
+    line-height: 1px;
+    margin-left: 60px;
+}
+#header a {
+    color: #fff;
+}
+#navi {
+    padding: 50px 0;
+}
+#navi .menu li {
+    padding: 10px;
+}
+
+/* ANIMATION
+------------------------------- */
+.menu li a{
+	position: relative;
+}
+.menu li.current a,
+.menu li a:hover{
+	color:#ffffff;
+}
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background:#fff;
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+.menu li.current a::after,
+.menu li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* ABOUT
+------------------------------- */
+#about {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    padding: 0 16px;
+}
+#about .about-inner {
+    width: 54%;
+    background-color: #fff;
+    padding: 50px 8% 50px 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#about .section-title {
+    margin-bottom: 50px;
+}
+#about .info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#about .info dt {
+    width: 20%;
+    margin-top: 10px;
+}
+#about .info dt:first-of-type {
+    margin-top: 0;
+}
+#about .info dd:first-of-type {
+    margin-top: 0;
+}
+#about .info dd {
+    width: 80%;
+    margin-top: 10px;
+}
+#about .info .add {
+    margin-left: 20%;
+}
+#about .img {
+    width: 40%;
+    top: 150px;
+    position: absolute;
+    right: 0;
+}
+#about img {
+    height: 400px;
+    border-radius: 50%;
+}
+.career {
+    padding: 3%;
+    background-color: #fff;
+}
+.career-text {
+    line-height: 2;
+}
+
+/* WORKS
+------------------------------- */
+#works {
+    display: flex;
+    justify-content: space-around;
+}
+#works a {
+    color: #333;
+}
+#product1 {
+    position: relative;
+    width: 40%;
+}
+#product2 {
+    position: relative;
+    width: 40%;
+}
+#product1 .text, #product2 .text {
+    color: #fff;
+    max-width: 290px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.6);
+    display: inline-block;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+#product1 .ptext, #product2 .ptext {
+    padding-top: 5px;
+}
+
+/* ANIMATION
+------------------------------- */
+.opacity img{
+	opacity:1;
+	transition: .3s ease-in-out;
+}
+.opacity a:hover img{
+	opacity:0.7;
+}
+
+/* FOOTER
+------------------------------- */
+#footer {
+    text-align: center;
+}
+#footer a {
+    color: #333;
+}
+
+
+/* RESPONSIVE
+------------------------------- */
+@media (max-width: 900px) {
+    #header {
+        height: 100vh;
+        padding: 80px 5% 0 5%;
+    }
+    #header .site-title {
+        margin-left: 50px;
+    }
+    #about {
+        flex-direction: column;
+        position: static;
+        height: 700px;
+    }
+    #about .about-inner {
+        width: 100%;
+        position: static;
+        padding: 5%;
+    }
+    #about .img {
+        width: 100%;
+        position: static;
+        text-align: center;
+    }
+    #about img {
+        width: 200px;
+        height: 200px;
+        border-radius: 0;
+        margin: 30px;
+    }
+    #works {
+        flex-direction: column;
+    }
+    #product1 {
+        width: 100%;
+        padding: 5%;
+    }
+    #product2 {
+        width: 100%;
+        padding: 5%;
+    }
+    
+}
