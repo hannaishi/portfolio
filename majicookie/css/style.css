@@ -1,0 +1,534 @@
+@charset "UTF-8";
+/** -----------------------------------------------
+  共通
+------------------------------------------------**/
+body {
+  font-size: 16px;
+	line-height: 1.6;
+	color: #000;
+	background-color:#fff;
+	font-family: "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, 
+                Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+/** -----------------------------------------------
+  Header
+------------------------------------------------**/
+#header {
+  background-image: url(../img/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.7;
+}
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+  position: fixed;
+  z-index: 999;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100vh;/*ナビの高さ*/
+  background:#efeae4;
+  transition: all 0.6s;
+}
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+  top: 0;
+}
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/*ナビゲーション*/
+#g-nav ul {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#g-nav li {
+  list-style: none;
+  text-align: center; 
+}
+#g-nav li a {
+  color: #502f15;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+.openbtn {
+  position: fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #502f15;
+  width: 45%;
+}
+.openbtn span:nth-of-type(1) {
+  top:15px;	
+}
+.openbtn span:nth-of-type(2) {
+  top:23px;
+}
+.openbtn span:nth-of-type(3) {
+  top:31px;
+}
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+.center-title {
+  position: relative;
+  height: 100vh;
+}
+.p-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;   
+  transform: translate(-50%, -50%);
+} 
+.h2-title {
+  font-size: 25px;
+  position: absolute;
+  top: 55%;
+  left: 50%;   
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+/** -----------------------------------------------
+  INFORMATION
+------------------------------------------------**/
+#information {
+  background-image: url(../img/information.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 8% 50%;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+.information {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 50px;
+}
+.info-box {
+  padding: 30px;
+  background-color: #fff;
+}
+.info-box h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #5a341f;
+}
+.date-area {
+  font-size: 15px;
+}
+.info-list p {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  Information
+  -------------------------------------------*/
+  #information {
+    background-position: 20%;
+  }
+  .information {
+    width: auto;
+    padding: 20px;
+  }
+  .info-box {
+    padding: 20px;
+  }
+  .info-box h2 {
+    font-size: 25px;
+  }
+  .info-list p {
+    font-size: 15px;
+  }
+  /*アコーディオン全体*/
+  .accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+  }
+  .accordion-area li{
+    margin: 10px 0;
+  }
+  .accordion-area section {
+    border: 1px solid #ccc;
+  }
+  /*アコーディオンタイトル*/
+  .title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+  }
+  /*アイコンの＋と×*/
+  .title::before,
+  .title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+  }
+  .title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+  }
+  .title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+  }
+/* closeというクラスがついたら形状変化 */
+  .title.close::before{
+  transform: rotate(45deg);
+  }
+  .title.close::after{
+  transform: rotate(-45deg);
+  }
+/*アコーディオンで現れるエリア*/
+  .box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+    margin:0 3% 3% 3%;
+    padding: 3%;
+  }
+}
+
+/** -----------------------------------------------
+  PhotoGallery
+------------------------------------------------**/
+#photogallery ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+#photogallery li {
+  width: 23%;
+  margin-bottom: 23px;
+}
+#photogallery li img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 100px auto 100px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  PhotoGallery
+  -------------------------------------------*/
+  #photogallery li {
+    width: 49%;
+    margin-bottom: 5px;
+  }
+}
+
+/** -----------------------------------------------
+  About
+------------------------------------------------**/
+#about {
+  background-color: #f2f3ee;
+}
+#about .wrapper {
+  max-width: 960px;
+  margin: 100px auto 0 auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+.menu-title {
+  text-align: center;
+  padding: 20px 0 50px;
+  position: relative;
+  font-weight: bold;
+  font-size: 30px;
+  color: #82716a;
+}
+.menu-titles::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: #82716a;
+  position: absolute;
+  top: 35%;
+  left: 35px;
+}
+.menu-titles::after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: #82716a;
+  position: absolute;
+  top: 35%;
+  right: 35px;
+}
+.card-1, .card-2, .card-3 {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+.card-4 {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 20px;
+} 
+.batter, .egg, .milk, .hand {
+  width: 30%;
+}
+.batter img, .egg img, .milk img,
+.hand img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 40px;
+}
+.batter-box, .egg-box, .milk-box, .hand-box {
+  width: 64%;
+  color: #82716a;
+  padding-left: 40px;
+}
+.batter-title, .egg-title, .milk-title, .hand-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.batter-description, .egg-description,
+.milk-description, .hand-description {
+  margin: 10px auto;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  .menu-title {
+    font-size: 25px;
+    padding: 10px 0 25px;
+  }
+  .card-1, .card-3 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-2, .card-4 {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .card-1, .card-2, .card-3 {
+    margin-bottom: 10px;
+  }
+  .batter, .egg, .milk, .hand {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .menu-titles::before {
+    width: 30px;
+    left: 0;
+  }
+  .menu-titles::after {
+    width: 30px;
+    right: 0;
+  }
+  .batter img, .egg img, .milk img, .hand img {
+    margin-left: 0;
+  }
+  .batter-box, .egg-box, .milk-box, .hand-box {
+    width: 100%;
+    padding-left: 0;
+  }
+  .batter-description, .egg-description,
+  .milk-description, .hand-description {
+    width: 80%;
+  }
+}
+
+/** -----------------------------------------------
+  Access
+------------------------------------------------**/
+#access {
+  background-color: #dad1ce;
+}
+#access .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding: 80px 4%;
+}
+.access {
+  display: flex;
+  justify-content: center;
+}
+.access-title {
+  text-align: center;
+  padding-right: 10px;
+}
+.access-text {
+  font-size: 13px;
+}
+.access-title {
+  font-size: 30px;
+}
+.purchase-img img {
+  width: 35px;
+}
+.address {
+  padding-right: 20px;
+}
+.purchase-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+.purchase-img {
+  background-color: #fff;
+  text-align: center;
+  line-height: 2.5;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  Access
+  -------------------------------------------*/
+  .access {
+    flex-direction: column;
+  }
+  .access-title {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .address {
+    padding-right: 0;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+  .purchase-text {
+    text-align: center;
+  }
+  .purchase-img {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+
+/** -----------------------------------------------
+  Footer
+------------------------------------------------**/
+#footer {
+  background-color: #b7a097;
+}
+.gnav-sp {
+  display: flex;
+  justify-content: center;
+}
+.footer-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding: 50px 4%;
+}
+.gnav-sp li {
+  padding-right: 20px;
+  font-weight: bold;
+  color: #574c48;
+}
+.gnav-sp li:last-child {
+  padding-right: 0;
+}
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer-icon img {
+  width: 30px;
+  margin-right: 30px;
+}
+.icon-insta img {
+  margin-right: 0;
+}
+.copyright {
+  text-align: center;
+  padding: 0 0 50px;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  Footer
+  -------------------------------------------*/
+  .gnav-sp {
+    display: none;
+  }
+}
