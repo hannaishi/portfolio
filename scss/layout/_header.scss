@@ -1,0 +1,106 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.header {
+    @include g.mq() {
+        border-bottom: 0.5px solid var(--color-border-pink);
+    }
+}
+.header-container {
+    font-family: var(--font-family-title);
+    color: var(--color-font-brown);
+    @include g.mq() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+    }
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    height: 75px;
+    line-height: 75px;
+    align-items: center;
+
+    @include g.mq() {
+        font-size: 24px;
+        height: auto;
+    }
+}
+.header-nav {
+    font-size: 16px;
+    font-weight: 700;
+}
+.header-menu {
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    overflow-x: hidden;
+    text-align: center;
+    width: 0;
+    transition: 0.5s;
+
+    @include g.mq() {
+        display: flex;
+        background: initial;
+        backdrop-filter: initial;
+        padding: 0;
+        margin-top: 0;
+        position: initial;
+        overflow-x: initial;
+        text-align: initial;
+        width: 100%;
+        transition: initial;
+    }
+}
+
+/* Navigation */
+.header-btn-menu {
+    display: block;
+    color: var(--color-font-white);
+    border: 1px solid var(--color-bg-right-grey);
+    border-radius: var(10px);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-bg-right-green);
+
+    @include g.mq() {
+        display: none;
+    }
+}
+.admin-bar .btn-menu {
+    top: calc(1rem + 46px);
+}
+.header-menu li:not(:last-child) {
+    padding: 1rem;
+
+    @include g.mq() {
+        padding: 0 30px 0 0;
+    }
+}
+.header-menu li:last-child {
+    padding: 1rem;
+
+    @include g.mq() {
+        padding: 0;
+    }
+}
+.header-menu a {
+    white-space: nowrap;
+}
+.header-menu.open-menu {
+    width: 100%;
+}

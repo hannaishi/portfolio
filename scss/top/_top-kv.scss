@@ -1,0 +1,140 @@
+@use "../global" as g;
+
+/*!
+top > top-kv
+------------------------------
+*/
+.top-kv {
+    padding: 25px 0 50px;
+
+    @include g.mq() {
+        padding: 50px 0;
+    }
+}
+
+.kv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include g.mq() {
+    }
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 5px 5px #605c5c4e;
+    }
+}
+.profile-badge {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(15%, 15%);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #8b6b5c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.kv-title {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-weight: 600;
+
+    span {
+        display: block;
+    }
+
+    @include g.mq() {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+}
+
+.kv-category {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+    li {
+        padding: 5px 10px;
+        background-color: var(--color-bg-white);
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 12px;
+        border: 2px solid var(--color-border-pink);
+        transition: filter 0.3s ease;
+    }
+
+    @include g.mq() {
+        padding-top: 15px;
+        gap: 8px;
+
+        li {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 12px;
+        }
+    }
+}
+.kv-description {
+    margin: 18px auto;
+    color: var(--color-font-brown);
+    span {
+        display: block;
+        font-size: 14px;
+
+        @include g.mq() {
+            font-size: 16px;
+        }
+    }
+    @include g.mq() {
+        margin: 30px auto;
+    }
+}
+.kv-button {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 500;
+
+    .left-button,
+    .right-button {
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 2px solid var(--color-border-brown);
+    }
+    .left-button {
+        background-color: var(--color-bg-brown);
+        color: var(--color-font-white);
+    }
+    .right-button {
+        color: var(--color-font-brown);
+    }
+
+    @include g.mq() {
+        flex-direction: row;
+    }
+}
