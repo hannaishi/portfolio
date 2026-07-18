@@ -2,349 +2,330 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Portfolio | Webコーダー 育児と両立しながらWebコーダーを目指しています。"
+        />
         <meta name="format-detection" content="telephone=no" />
-
-        <!-- favicon/webclipicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="apple-touch-icon" href="webclip.png" />
-
-        <!-- ogp -->
-        <meta property="og:site_name" content="Orange Heart" />
-        <meta property="og:url" content="https://nmhr12.com/portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Portfolio" />
-        <meta
-            property="og:description"
-            content="育児と両立しながらWeb制作会社への転職を目指しています。"
-        />
-        <meta
-            property="og:image"
-            content="https://nmhr12.com/portfolio/img/ogp.png"
-        />
-        <meta property="og:locale" content="ja_JP" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Portfolio" />
-        <meta
-            name="twitter:description"
-            content="育児と両立しながらWeb制作会社への転職を目指しています。"
-        />
-        <meta
-            name="twitter:image"
-            content="https://nmhr12.com/portfolio/img/ogp.png"
-        />
-
-        <!-- google fonts -->
+        <title>Portfolio | Webコーダー</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-
-        <!-- css -->
-        <link rel="stylesheet" href="css/style.css" />
-
-        <!-- js -->
-        <script type="module" src="js/main.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/js/main.js" defer></script>
     </head>
-
     <body>
-        <header class="header">
-            <div class="header-container l-container-s">
-                <h1 class="site-title">
-                    <a href="#"> Portfolio </a>
-                </h1>
-                <nav class="header-nav">
-                    <button class="header-btn-menu">メニュー</button>
-                    <ul class="header-menu">
-                        <li><a href="#">TOP</a></li>
-                        <li><a href="#top-about">ABOUT</a></li>
-                        <li><a href="#top-works">WORKS</a></li>
+        <a class="skip-link" href="#main">本文へ移動</a>
+        <header class="site-header" data-header>
+            <div class="site-header__inner container">
+                <a
+                    class="site-header__logo"
+                    href="#top"
+                    aria-label="Portfolio トップへ"
+                    >Portfolio</a
+                >
+                <nav class="global-nav" aria-label="メインナビゲーション">
+                    <ul class="global-nav__list">
+                        <li><a href="#top" data-nav-link>Top</a></li>
+                        <li><a href="#about" data-nav-link>About</a></li>
+                        <li><a href="#works" data-nav-link>Works</a></li>
                     </ul>
                 </nav>
+                <button
+                    class="menu-button"
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                    data-menu-button
+                >
+                    <span></span><span></span><span></span>
+                </button>
             </div>
+            <nav
+                class="mobile-menu"
+                id="mobile-menu"
+                aria-label="モバイルナビゲーション"
+                aria-hidden="true"
+                data-mobile-menu
+            >
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-
-        <main>
-            <section class="top-kv">
-                <div class="kv-container l-container-s">
-                    <div class="profile-image">
+        <main id="main">
+            <section class="hero" id="top" aria-labelledby="hero-title">
+                <div class="hero__inner container reveal">
+                    <div class="profile" aria-hidden="true">
                         <img
+                            class="profile__circle"
+                            src="assets/img/portfolio.jpg"
                             width="400"
                             height="400"
-                            src="img/portfolio.jpg"
-                            alt="アイコン画像"
+                            alt="profile"
                             decoding="async"
-                            loading="lazy"
                         />
-                        <span class="profile-badge">育児中</span>
+                        <span class="profile__badge">育児中</span>
                     </div>
-                    <div class="kv-title">
-                        <span>Webコーダー / </span>
-                        <span>フロントエンドエンジニア</span>
-                    </div>
-                    <ul class="kv-category">
-                        <li class="kv-category-item">HTML/CSS(SCSS)</li>
-                        <li class="kv-category-item">JavaScript</li>
-                        <li class="kv-category-item">WordPress</li>
-                        <li class="kv-category-item">PHP</li>
-                        <li class="kv-category-item">React Native 学習中</li>
+                    <h1 class="hero__title" id="hero-title">
+                        Webコーダー /<br class="sp-only" />
+                        フロントエンドエンジニア
+                    </h1>
+                    <ul class="skill-list" aria-label="スキル">
+                        <li>HTML/CSS(SCSS)</li>
+                        <li>JavaScript</li>
+                        <li>WordPress</li>
+                        <li>PHP</li>
+                        <li>React Native 学習中</li>
                     </ul>
-                    <div class="kv-description">
-                        <span>育児と両立しながら</span>
-                        <span>Web制作会社への転職を目指しています。</span>
-                    </div>
-                    <div class="kv-button">
-                        <button class="left-button">制作実績を見る</button>
-                        <button class="right-button">自己紹介</button>
+                    <p class="hero__lead">
+                        育児と両立しながら<br />Webコーダーを目指しています。
+                    </p>
+                    <div class="hero__buttons">
+                        <a class="button button--primary" href="#works"
+                            >制作実績を見る</a
+                        ><a class="button button--outline" href="#about"
+                            >自己紹介</a
+                        >
                     </div>
                 </div>
             </section>
-
-            <section id="top-about" class="top-about">
-                <div class="l-container-s">
-                    <div class="c-title-container">
-                        <h2 class="c-title">ABOUT</h2>
-                    </div>
-
-                    <div class="about-content">
-                        <section>
-                            <h3 class="about-title">大切にしていること</h3>
-                            <ul>
-                                <li class="left-item">
-                                    コミュニケーションを大切にしています
-                                </li>
-                                <li class="left-item">
-                                    レスポンシブ対応が得意です
-                                </li>
-                                <li class="left-item">
+            <section
+                class="section about"
+                id="about"
+                aria-labelledby="about-title"
+            >
+                <div class="container">
+                    <header class="section-heading reveal">
+                        <h2 id="about-title">About</h2>
+                        <span></span>
+                    </header>
+                    <div class="about__columns">
+                        <section class="about__block reveal">
+                            <h3>大切にしていること</h3>
+                            <ul class="value-list">
+                                <li>コミュニケーションを大切にしています</li>
+                                <li>レスポンシブ対応が得意です</li>
+                                <li>
                                     WordPress化を意識したコーディングを行います
                                 </li>
-                                <li class="left-item">
-                                    相手目線で考えることを大切にしています
-                                </li>
+                                <li>相手目線で考えることを大切にしています</li>
                             </ul>
                         </section>
-
-                        <section>
-                            <h3 class="about-title">経験</h3>
-                            <ul>
-                                <li class="right-item">
-                                    通訳アシスタント経験：半年
-                                </li>
-                                <li class="right-item">SES経験：２年</li>
-                                <li class="right-item">
-                                    アルバイトを含む接客業経験：8年
-                                </li>
-                                <li class="right-item">育児中</li>
-                                <li class="right-item">Web制作学習</li>
-                                <li class="right-item">制作実績</li>
+                        <section class="about__block reveal">
+                            <h3>経験</h3>
+                            <ul class="experience-list">
+                                <li>SES経験：2年</li>
+                                <li>通訳アシスタント経験：半年</li>
+                                <li>アルバイトを含む接客業経験：8年</li>
+                                <li>育児中</li>
+                                <li>Web制作学習</li>
+                                <li>制作実績</li>
                             </ul>
                         </section>
                     </div>
-
-                    <div class="about-text">
-                        <span
-                            >丁寧なコミュニケーションと、クライアント目線を大切にした制作を心がけています。</span
-                        >
-                        <span
-                            >育児と両立しながら、日々スキルアップに励んでいます。</span
-                        >
+                    <p class="about__message reveal">
+                        丁寧なコミュニケーションと、クライアント目線を大切にした制作を心がけています。<br />育児と両立しながら、日々スキルアップに励んでいます。
+                    </p>
+                </div>
+            </section>
+            <section
+                class="section works"
+                id="works"
+                aria-labelledby="works-title"
+            >
+                <div class="container container--wide">
+                    <header class="section-heading reveal">
+                        <h2 id="works-title">Works</h2>
+                        <span></span>
+                    </header>
+                    <div class="works__grid">
+                        <article class="work-card reveal">
+                            <a
+                                class="work-card__image-link"
+                                href="https://verablog.com/cafeCalmati/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                tabindex="-1"
+                                ><img
+                                    src="assets/img/cafe-calmati.png"
+                                    alt="Cafe CalmatiのWebサイト"
+                            /></a>
+                            <div class="work-card__body">
+                                <div class="work-card__heading">
+                                    <h3>Cafe Calmati</h3>
+                                    <a
+                                        href="https://verablog.com/cafeCalmati/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Cafe Calmatiを新しいタブで開く"
+                                        ><img src="assets/img/link.png" alt=""
+                                    /></a>
+                                </div>
+                                <section class="work-card__section">
+                                    <h4>使用技術</h4>
+                                    <div class="tags">
+                                        <span>HTML</span><span>SCSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>担当範囲</h4>
+                                    <ul>
+                                        <li>デザインカンプからコーディング</li>
+                                        <li>レスポンシブ対応</li>
+                                        <li>SCSS設計</li>
+                                    </ul>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>工夫した点</h4>
+                                    <p>
+                                        PCデザインのみだったのでSPデザインを自作し制作した点です。
+                                    </p>
+                                </section>
+                            </div>
+                        </article>
+                        <article class="work-card reveal">
+                            <a
+                                class="work-card__image-link"
+                                href="https://nmhr12.com/paisible"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                tabindex="-1"
+                                ><img
+                                    src="assets/img/paisible.png"
+                                    alt="PaisibleのWebサイト"
+                            /></a>
+                            <div class="work-card__body">
+                                <div class="work-card__heading">
+                                    <h3>Paisible</h3>
+                                    <a
+                                        href="https://nmhr12.com/paisible"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Paisibleを新しいタブで開く"
+                                        ><img src="assets/img/link.png" alt=""
+                                    /></a>
+                                </div>
+                                <section class="work-card__section">
+                                    <h4>使用技術</h4>
+                                    <div class="tags">
+                                        <span>HTML</span><span>SCSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>担当範囲</h4>
+                                    <ul>
+                                        <li>デザインからコーディング</li>
+                                        <li>レスポンシブ対応</li>
+                                        <li>SCSS設計</li>
+                                    </ul>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>工夫した点</h4>
+                                    <p>
+                                        デザインからコーディングまで一貫して自作しました。明るい雰囲気と雰囲気に合うフォントや、写真の見やすさと雰囲気に合う加工をしています。
+                                    </p>
+                                </section>
+                            </div>
+                        </article>
+                        <article class="work-card work-card--featured reveal">
+                            <p class="work-card__featured">Featured Project</p>
+                            <a
+                                class="work-card__image-link"
+                                href="https://jijisite.com/sample-store/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                tabindex="-1"
+                                ><img
+                                    src="assets/img/sample-store.png"
+                                    alt="Sample StoreのWebサイト"
+                            /></a>
+                            <div class="work-card__body">
+                                <div class="work-card__heading">
+                                    <h3>Sample Store</h3>
+                                    <a
+                                        href="https://jijisite.com/sample-store/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Sample Storeを新しいタブで開く"
+                                        ><img src="assets/img/link.png" alt=""
+                                    /></a>
+                                </div>
+                                <section class="work-card__section">
+                                    <h4>使用技術</h4>
+                                    <div class="tags">
+                                        <span>HTML</span><span>SCSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>特徴</h4>
+                                    <div class="tags tags--accent">
+                                        <span>WordPress化予定</span
+                                        ><span>CMS設計</span
+                                        ><span>Firebase連携</span
+                                        ><span>React Nativeアプリ開発</span>
+                                    </div>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>担当範囲</h4>
+                                    <ul>
+                                        <li>デザインからコーディング</li>
+                                        <li>WordPress化</li>
+                                        <li>React Nativeアプリ開発</li>
+                                        <li>Firebase連携</li>
+                                    </ul>
+                                </section>
+                                <section class="work-card__section">
+                                    <h4>工夫した点</h4>
+                                    <p>
+                                        WordPressを想定し、実家で経営しているローカルコンビニをモデルにFigmaAIにデザインをお願いし、コーディングしました。店舗サイトを想定し、お知らせやキャンペーン更新を考慮したWordPress化を前提に設計しました。BEM設計を意識し、再利用性の高いCSS構成を採用。CMSアプリ開発もしています。React
+                                        NativeアプリでFirebase連携もしています。
+                                    </p>
+                                </section>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
-
-            <section id="top-work" class="top-work">
-                <div class="c-title-container">
-                    <h2 class="c-title">WORKS</h2>
-                </div>
-                <div class="work-container l-container-s">
-                    <article class="work-card">
-                        <div class="work-card_img">
-                            <img
-                                src="img/cafe-calmati.png"
-                                width="300"
-                                height="250"
-                                alt="CafeCalmati"
-                                decoding="async"
-                            />
-                        </div>
-                        <div class="work-card_body">
-                            <div class="work-card_title">
-                                <h3>Cafe Calmati</h3>
-                                <a
-                                    class="external-link"
-                                    href="https://verablog.com/cafeCalmati"
-                                    aria-label="CafeCalmatiの詳細を開く"
-                                >
-                                    <img
-                                        src="img/link.png"
-                                        width="24"
-                                        height="24"
-                                        alt="CafeCalmati"
-                                        decoding="async"
-                                    />
-                                </a>
-                            </div>
-                            <section class="work-card_section">
-                                <h4>使用技術</h4>
-                                <div class="tags">
-                                    <span>HTML</span>
-                                    <span>SCSS</span>
-                                    <span>JavaScript</span>
-                                </div>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>担当範囲</h4>
-                                <ul>
-                                    <li>デザインカンプからコーディング</li>
-                                    <li>レスポンシブ対応</li>
-                                    <li>SCSS設計</li>
-                                </ul>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>工夫した点</h4>
-                                <p>
-                                    PCデザインのみだったのでSPデザインを自作し制作した点です。
-                                </p>
-                            </section>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-card_img">
-                            <img
-                                src="img/paisible.png"
-                                width="300"
-                                height="250"
-                                alt="Paisible"
-                                decoding="async"
-                            />
-                        </div>
-                        <div class="work-card_body">
-                            <div class="work-card_title">
-                                <h3>Paisible</h3>
-                                <a
-                                    class="external-link"
-                                    href="https://verablog.com/paisible/"
-                                    aria-label="Paisibleの詳細を開く"
-                                >
-                                    <img
-                                        src="img/link.png"
-                                        width="300"
-                                        height="250"
-                                        alt="Paisible-link"
-                                        decoding="async"
-                                    />
-                                </a>
-                            </div>
-                            <section class="work-card_section">
-                                <h4>使用技術</h4>
-                                <div class="tags">
-                                    <span>HTML</span>
-                                    <span>SCSS</span>
-                                    <span>JavaScript</span>
-                                </div>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>担当範囲</h4>
-                                <ul>
-                                    <li>デザインカンプからコーディング</li>
-                                    <li>レスポンシブ対応</li>
-                                    <li>SCSS設計</li>
-                                </ul>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>工夫した点</h4>
-                                <p>
-                                    デザインからコーディングまで一貫して自作しました。明るい雰囲気と雰囲気に合うフォントや、写真の見やすさと雰囲気に合う加工をしています。
-                                </p>
-                            </section>
-                        </div>
-                    </article>
-                    <article class="work-card work-card--featured">
-                        <div class="featured-label">Featured Project</div>
-                        <div class="work-card_img">
-                            <img
-                                src="img/sample-store.png"
-                                width="300"
-                                height="250"
-                                alt="Sample-Store"
-                                decoding="async"
-                            />
-                        </div>
-                        <div class="work-card_body">
-                            <div class="work-card_title">
-                                <h3>Paisible</h3>
-                                <a
-                                    class="external-link"
-                                    href="https://jijisite.com/sample-store"
-                                    aria-label="Sample-Storeの詳細を開く"
-                                >
-                                    <img
-                                        src="img/link.png"
-                                        width="300"
-                                        height="250"
-                                        alt="Sample-Store-link"
-                                        decoding="async"
-                                    />
-                                </a>
-                            </div>
-                            <section class="work-card_section">
-                                <h4>使用技術</h4>
-                                <div class="tags tags--brown">
-                                    <span>Figma</span>
-                                    <span>Figma AI</span>
-                                    <span>HTML</span>
-                                    <span>SCSS</span>
-                                    <span>JavaScript</span>
-                                    <span>WordPress</span>
-                                </div>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>担当範囲</h4>
-                                <ul>
-                                    <li>デザインカンプからコーディング</li>
-                                    <li>レスポンシブ対応</li>
-                                    <li>SCSS設計</li>
-                                    <li>WordPress化</li>
-                                    <li>カスタム投稿</li>
-                                    <li>Contact Form 7</li>
-                                    <li>本番環境構築（Xserver）</li>
-                                    <li>SSL対応</li>
-                                </ul>
-                            </section>
-                            <section class="work-card_section">
-                                <h4>工夫した点</h4>
-                                <p>
-                                    WordPressを想定し、実家で経営しているローカルコンビニをモデルにFigmaAIにデザインをお願いし、コーディングしました。
-                                    店舗サイトを想定し、お知らせやキャンペーン更新を考慮したWordPress化を前提に設計しました。BEM設計を意識し、再利用性の高いCSS構成を採用。CMSアプリ開発もしています。
-                                    React
-                                    NativeアプリでFirebase連携もしています。
-                                </p>
-                            </section>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <footer class="footer">
-                <div class="footer-container">
-                    <h2 class="contact-title">お問い合わせ</h2>
+            <section
+                class="contact"
+                id="contact"
+                aria-labelledby="contact-title"
+            >
+                <div class="container reveal">
+                    <h2 id="contact-title">お問い合わせ</h2>
                     <p>
                         ご質問やご相談がございましたら、お気軽にご連絡ください。
                     </p>
-                    <div class="contact-inner">
-                        <button>メールで連絡</button>
-                        <button>GitHub</button>
+                    <div class="contact__buttons">
+                        <a
+                            class="button button--primary"
+                            href="mailto:contact@example.com"
+                            ><span aria-hidden="true">✉</span> メールで連絡</a
+                        ><a
+                            class="button button--outline"
+                            href="https://github.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span aria-hidden="true">♧</span> GitHub</a
+                        >
                     </div>
                 </div>
-                <p class="copyright">
-                    &copy;2026 Portfolio.All rights reserved.
-                </p>
-            </footer>
+            </section>
         </main>
+        <footer class="site-footer">
+            <p>©2026 Portfolio. All rights reserved.</p>
+        </footer>
     </body>
 </html>
