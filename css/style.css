@@ -629,7 +629,7 @@ body.is-menu-open {
 
 .works-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 56px;
   margin: 56px 0 0;
   padding: 0;
@@ -765,9 +765,15 @@ body.is-menu-open {
 
 @media (min-width: 768px) {
   .works-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 72px 48px;
     margin-top: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .works-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
   }
 }
 .about-inner {
