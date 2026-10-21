@@ -1,0 +1,73 @@
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+:root {
+  --color-bg: #fbf8f7;
+  --color-surface: #ffffff;
+  --color-sub: #f3e9eb;
+  --color-text: #453b3e;
+  --color-heading: #967a84;
+  --color-button: #74545f;
+  --color-accent: #b18c97;
+  --color-muted: #7a6270;
+  --color-line: #d8c6cb;
+  --color-white: #ffffff;
+  --color-focus: #453b3e;
+
+  --font-display: "Cormorant Garamond", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.75rem;
+  --text-6xl: 5.75rem;
+
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-10: 120px;
+
+  --header-height: 64px;
+  --page-gutter: 20px;
+  --section-space: 80px;
+  --width-wide: 1120px;
+  --radius-sm: 2px;
+  --motion-duration: 0.3s;
+  --motion-ease: ease;
+  --line-height-body: 1.9;
+}
+
+@media (min-width: $bp-sm) {
+  :root {
+    --page-gutter: 24px;
+    --section-space: 96px;
+  }
+}
+
+@media (min-width: $bp-md) {
+  :root {
+    --header-height: 76px;
+    --page-gutter: 40px;
+    --section-space: 112px;
+  }
+}
+
+@media (min-width: $bp-lg) {
+  :root {
+    --page-gutter: 48px;
+    --section-space: 128px;
+  }
+}

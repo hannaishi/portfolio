@@ -1,0 +1,149 @@
+@use "../foundation/variables" as *;
+
+.works-inner {
+  min-width: 0;
+}
+
+.works-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.works-card {
+  min-width: 0;
+  text-align: left;
+}
+
+.works-card-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.works-card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg);
+}
+
+.works-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s var(--motion-ease);
+}
+
+.works-card:has(.works-card-link):hover .works-card-image {
+  transform: scale(1.03);
+}
+
+.works-card-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.works-card-number {
+  margin: 22px 0 0;
+  color: var(--color-button);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.works-card-title {
+  margin: 8px 0 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.works-card-category {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.works-card-tags {
+  margin-top: 14px;
+}
+
+.works-card-scope {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
+.works-card-description {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.9;
+}
+
+.works-card-view {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 8px;
+  color: var(--color-button);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  line-height: 1;
+}
+
+.works-card-link:hover .works-card-view {
+  color: var(--color-text);
+}
+
+.works-card-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform var(--motion-duration) var(--motion-ease);
+}
+
+.works-card-link:hover .works-card-arrow {
+  transform: translateX(4px);
+}
+
+@media (min-width: $bp-md) {
+  .works-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 72px 48px;
+    margin-top: 80px;
+  }
+}

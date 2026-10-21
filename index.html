@@ -1,331 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-            name="description"
-            content="Portfolio | Webコーダー 育児と両立しながらWebコーダーを目指しています。"
-        />
-        <meta name="format-detection" content="telephone=no" />
-        <title>Portfolio | Webコーダー</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <script src="assets/js/main.js" defer></script>
-    </head>
-    <body>
-        <a class="skip-link" href="#main">本文へ移動</a>
-        <header class="site-header" data-header>
-            <div class="site-header__inner container">
-                <a
-                    class="site-header__logo"
-                    href="#top"
-                    aria-label="Portfolio トップへ"
-                    >Portfolio</a
-                >
-                <nav class="global-nav" aria-label="メインナビゲーション">
-                    <ul class="global-nav__list">
-                        <li><a href="#top" data-nav-link>Top</a></li>
-                        <li><a href="#about" data-nav-link>About</a></li>
-                        <li><a href="#works" data-nav-link>Works</a></li>
-                    </ul>
-                </nav>
-                <button
-                    class="menu-button"
-                    type="button"
-                    aria-label="メニューを開く"
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
-                    data-menu-button
-                >
-                    <span></span><span></span><span></span>
-                </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | 使いやすいWebサイトへ。</title>
+  <meta name="description" content="レスポンシブ対応からWordPress構築まで。丁寧で保守しやすい実装を心がけています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="u-skip-link" href="#hero">本文へスキップ</a>
+  <header class="l-header">
+    <div class="l-header-inner l-container">
+      <a class="l-header-logo" href="#hero">Portfolio</a>
+      <button class="l-header-menu" type="button" aria-expanded="false" aria-controls="header-nav" aria-label="メニューを開く">
+        <span class="l-header-bar l-header-bar-top" aria-hidden="true"></span>
+        <span class="l-header-bar l-header-bar-middle" aria-hidden="true"></span>
+        <span class="l-header-bar l-header-bar-bottom" aria-hidden="true"></span>
+      </button>
+      <nav class="l-header-nav" id="header-nav" aria-label="メインメニュー">
+        <ul class="l-header-list">
+          <li><a class="l-header-link" href="#works">WORKS</a></li>
+          <li><a class="l-header-link" href="#about">ABOUT</a></li>
+          <li><a class="l-header-link" href="#skills">SKILLS</a></li>
+          <li><a class="l-header-link" href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="hero" tabindex="-1" aria-labelledby="hero-title">
+      <div class="hero-inner l-container">
+        <p class="hero-kicker"><span class="hero-kicker-text">WEB CODER</span><span class="hero-kicker-slash" aria-hidden="true">/</span><span class="hero-kicker-text">FRONTEND DEVELOPER</span></p>
+        <h1 class="hero-title" id="hero-title"><span class="hero-title-word">WEB</span><span class="hero-title-word">PORTFOLIO</span></h1>
+        <span class="hero-line" aria-hidden="true"></span>
+        <p class="hero-copy">使いやすいWebサイトへ。</p>
+        <p class="hero-lead"><span class="hero-lead-line">レスポンシブ対応からWordPress構築まで。</span><span class="hero-lead-line">丁寧で保守しやすい実装を心がけています。</span></p>
+        <div class="hero-actions">
+          <a class="c-button" href="#works">制作実績を見る</a>
+          <a class="c-button c-button--outline" href="#about">私について</a>
+        </div>
+      </div>
+    </section>
+    <section class="l-section l-section--surface" id="works" tabindex="-1" aria-labelledby="works-heading">
+      <div class="works-inner l-container">
+        <h2 class="c-section-heading" id="works-heading">WORKS</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">制作実績</p>
+        <p class="c-section-lead">これまでに制作したWebサイトをご紹介します。</p>
+        <ol class="works-list">
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/morisita.png" alt="MORISITAのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">01</p>
+            <h3 class="works-card-title">MORISITA</h3>
+            <p class="works-card-category">企業サイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">WordPress</span></li>
+              <li><span class="c-tag">PHP</span></li>
+              <li><span class="c-tag">ACF</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：静的コーディング / WordPressテーマ / カスタム投稿</p>
+            <p class="works-card-description">特殊ボルトナットメーカーの企業サイトです。公開中のページは静的版です。</p>
+            <a class="works-card-link" href="https://nmhr12.com/coding-task/morisita/" target="_blank" rel="noopener noreferrer"><span class="works-card-view">VIEW SITE<span class="works-card-arrow" aria-hidden="true">→</span><span class="u-visually-hidden">（新しいタブで開きます）</span></span></a>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><p class="works-card-fallback">画像準備中</p></div>
+            <p class="works-card-number">02</p>
+            <h3 class="works-card-title">武者への道</h3>
+            <p class="works-card-category">メディアサイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">WordPress</span></li>
+              <li><span class="c-tag">PHP</span></li>
+              <li><span class="c-tag">ACF</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：WordPressテーマ / ACF / PHP</p>
+            <p class="works-card-description">駆け出しデザイナー・エンジニアを応援するメディアサイトです。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/supple.png" alt="SUPPLEのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">03</p>
+            <h3 class="works-card-title">SUPPLE</h3>
+            <p class="works-card-category">カフェサイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">WordPress</span></li>
+              <li><span class="c-tag">PHP</span></li>
+              <li><span class="c-tag">ACF</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：WordPressテーマ / カスタム投稿 / ACF</p>
+            <p class="works-card-description">コーヒーを扱うカフェのWordPressサイトです。</p>
+            <a class="works-card-link" href="https://supple.nmhr12.com/" target="_blank" rel="noopener noreferrer"><span class="works-card-view">VIEW SITE<span class="works-card-arrow" aria-hidden="true">→</span><span class="u-visually-hidden">（新しいタブで開きます）</span></span></a>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/nexta.png" alt="NEXTAのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">04</p>
+            <h3 class="works-card-title">NEXTA</h3>
+            <p class="works-card-category">企業サイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">CSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：静的コーディング / レスポンシブ対応</p>
+            <p class="works-card-description">中小企業のビジネスを支えるWeb制作会社のサイトです。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/lucia.png" alt="ルシア レディースクリニックのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">05</p>
+            <h3 class="works-card-title">Lucia</h3>
+            <p class="works-card-category">クリニックサイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">SCSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：静的コーディング / レスポンシブ対応</p>
+            <p class="works-card-description">女性のライフステージに寄り添う婦人科クリニックのサイトです。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/juicy-mama.png" alt="ジューシーママのヒーロー。ヘッダーとファーストビューまで" width="1280" height="800"></div>
+            <p class="works-card-number">06</p>
+            <h3 class="works-card-title">Juicy Mama</h3>
+            <p class="works-card-category">コミュニティサイト（制作中）</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">SCSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：静的コーディング（ヘッダー・ヒーローまで）</p>
+            <p class="works-card-description">ママのコミュニティサイトです。静的サイト化の途中で、現在はヘッダーとヒーローまで実装しています。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/shemate-tohoku.jpg" alt="シーメイト東北部のデザイン画面。SHElikesコミュニティ東北部のファーストビュー" width="1280" height="800"></div>
+            <p class="works-card-number">07</p>
+            <h3 class="works-card-title">シーメイト東北部</h3>
+            <p class="works-card-category">コミュニティサイト（制作予定）</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">Figma</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：コーディング前（Figma AIのデータを元に制作予定）</p>
+            <p class="works-card-description">SHElikesコミュニティ東北部向けのサイトです。デザインデータはあり、コーディングはこれから行う予定です。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/matsuyama-clinic.png" alt="松山クリニック採用サイトのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">08</p>
+            <h3 class="works-card-title">Matsuyama Clinic</h3>
+            <p class="works-card-category">クリニックサイト / 採用サイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">CSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：静的コーディング / レスポンシブ対応</p>
+            <p class="works-card-description">松山クリニックの採用サイトです。ご挨拶、３つの特徴、インタビュー、新着情報、エントリーを1ページで掲載しています。メニューのトピックはエントリーへリンクしています。</p>
+            <a class="works-card-link" href="https://nmhr12.com/coding-task/matsuyama-clinic/" target="_blank" rel="noopener noreferrer"><span class="works-card-view">VIEW SITE<span class="works-card-arrow" aria-hidden="true">→</span><span class="u-visually-hidden">（新しいタブで開きます）</span></span></a>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><p class="works-card-fallback">画像準備中</p></div>
+            <p class="works-card-number">09</p>
+            <h3 class="works-card-title">Cafe Calmati</h3>
+            <p class="works-card-category">カフェサイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">SCSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：デザインカンプからのコーディング / レスポンシブ対応</p>
+            <p class="works-card-description">PCデザインをもとに、スマートフォン表示も合わせて制作したカフェサイトです。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><p class="works-card-fallback">画像準備中</p></div>
+            <p class="works-card-number">10</p>
+            <h3 class="works-card-title">Paisible</h3>
+            <p class="works-card-category">オリジナルサイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">SCSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：デザイン / コーディング / レスポンシブ対応</p>
+            <p class="works-card-description">デザインからコーディングまで一貫して制作したサイトです。</p>
+          </li>
+          <li class="works-card">
+            <div class="works-card-media"><img class="works-card-image" src="assets/images/works/sample-store.png" alt="地域のコンビニのトップページ" width="1280" height="800"></div>
+            <p class="works-card-number">11</p>
+            <h3 class="works-card-title">Sample Store</h3>
+            <p class="works-card-category">店舗サイト</p>
+            <ul class="works-card-tags c-tag-list" aria-label="使用技術">
+              <li><span class="c-tag">WordPress</span></li>
+              <li><span class="c-tag">CSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+            <p class="works-card-scope">担当範囲：WordPressテーマの実装</p>
+            <p class="works-card-description">地域のコンビニを想定した店舗サイトです。</p>
+            <a class="works-card-link" href="https://jijisite.com/sample-store/" target="_blank" rel="noopener noreferrer"><span class="works-card-view">VIEW SITE<span class="works-card-arrow" aria-hidden="true">→</span><span class="u-visually-hidden">（新しいタブで開きます）</span></span></a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="l-section l-section--sub" id="about" tabindex="-1" aria-labelledby="about-heading">
+      <div class="about-inner l-container">
+        <h2 class="c-section-heading about-heading" id="about-heading">ABOUT ME</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">私について</p>
+        <div class="about-layout">
+          <div class="about-copy">
+            <p class="about-lead">デザインの細部まで大切に、<span class="about-lead-line">丁寧なWebサイト制作を。</span></p>
+            <div class="about-text">
+              <p class="about-paragraph">HTML・SCSS・JavaScriptによるコーディングを中心に、WordPressのオリジナルテーマ制作にも取り組んでいます。</p>
+              <p class="about-paragraph">デザインの意図を汲み取り、余白や文字サイズ、レスポンシブでの見え方まで丁寧に調整することを心がけています。</p>
+              <p class="about-paragraph">また、更新や修正がしやすいコード設計を大切にしています。</p>
             </div>
-            <nav
-                class="mobile-menu"
-                id="mobile-menu"
-                aria-label="モバイルナビゲーション"
-                aria-hidden="true"
-                data-mobile-menu
-            >
-                <ul>
-                    <li><a href="#top">Top</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="main">
-            <section class="hero" id="top" aria-labelledby="hero-title">
-                <div class="hero__inner container reveal">
-                    <div class="profile" aria-hidden="true">
-                        <img
-                            class="profile__circle"
-                            src="assets/img/portfolio.jpg"
-                            width="400"
-                            height="400"
-                            alt="profile"
-                            decoding="async"
-                        />
-                        <span class="profile__badge">育児中</span>
-                    </div>
-                    <h1 class="hero__title" id="hero-title">
-                        Webコーダー /<br />
-                        フロントエンドエンジニア
-                    </h1>
-                    <ul class="skill-list" aria-label="スキル">
-                        <li>HTML/CSS(SCSS)</li>
-                        <li>JavaScript 学習中</li>
-                        <li>WordPress</li>
-                        <li>PHP</li>
-                        <li>React Native</li>
-                    </ul>
-                    <p class="hero__lead">
-                        育児と両立しながら<br />Webコーダーを目指しています。
-                    </p>
-                    <div class="hero__buttons">
-                        <a class="button button--primary" href="#works"
-                            >制作実績を見る</a
-                        ><a class="button button--outline" href="#about"
-                            >自己紹介</a
-                        >
-                    </div>
-                </div>
-            </section>
-            <section
-                class="section about"
-                id="about"
-                aria-labelledby="about-title"
-            >
-                <div class="container">
-                    <header class="section-heading reveal">
-                        <h2 id="about-title">About</h2>
-                        <span></span>
-                    </header>
-                    <div class="about__columns">
-                        <section class="about__block reveal">
-                            <h3>大切にしていること</h3>
-                            <ul class="value-list">
-                                <li>コミュニケーションを大切にしています</li>
-                                <li>レスポンシブ対応が得意です</li>
-                                <li>
-                                    WordPress化を意識したコーディングを行います
-                                </li>
-                                <li>相手目線で考えることを大切にしています</li>
-                            </ul>
-                        </section>
-                        <section class="about__block reveal">
-                            <h3>経験</h3>
-                            <ul class="experience-list">
-                                <li>SES経験：2年</li>
-                                <li>通訳アシスタント経験：半年</li>
-                                <li>アルバイトを含む接客業経験：8年</li>
-                                <li>育児中</li>
-                                <li>Web制作学習</li>
-                                <li>制作実績</li>
-                            </ul>
-                        </section>
-                    </div>
-                    <p class="about__message reveal">
-                        丁寧なコミュニケーションと、クライアント目線を大切にした制作を心がけています。<br />育児と両立しながら、日々スキルアップに励んでいます。
-                    </p>
-                </div>
-            </section>
-            <section
-                class="section works"
-                id="works"
-                aria-labelledby="works-title"
-            >
-                <div class="container container--wide">
-                    <header class="section-heading reveal">
-                        <h2 id="works-title">Works</h2>
-                        <span></span>
-                    </header>
-                    <div class="works__grid">
-                        <article class="work-card reveal">
-                            <a
-                                class="work-card__image-link"
-                                href="https://verablog.com/cafeCalmati/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="-1"
-                                ><img
-                                    src="assets/img/cafe-calmati.png"
-                                    alt="Cafe CalmatiのWebサイト"
-                            /></a>
-                            <div class="work-card__body">
-                                <div class="work-card__heading">
-                                    <h3>Cafe Calmati</h3>
-                                    <a
-                                        href="https://verablog.com/cafeCalmati/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="Cafe Calmatiを新しいタブで開く"
-                                        ><img src="assets/img/link.png" alt=""
-                                    /></a>
-                                </div>
-                                <section class="work-card__section">
-                                    <h4>使用技術</h4>
-                                    <div class="tags">
-                                        <span>HTML</span><span>SCSS</span
-                                        ><span>JavaScript</span>
-                                    </div>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>担当範囲</h4>
-                                    <ul>
-                                        <li>デザインカンプからコーディング</li>
-                                        <li>レスポンシブ対応</li>
-                                        <li>SCSS設計</li>
-                                    </ul>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>工夫した点</h4>
-                                    <p>
-                                        PCデザインのみだったのでSPデザインを自作し制作した点です。
-                                    </p>
-                                </section>
-                            </div>
-                        </article>
-                        <article class="work-card reveal">
-                            <a
-                                class="work-card__image-link"
-                                href="https://nmhr12.com/paisible"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="-1"
-                                ><img
-                                    src="assets/img/paisible.png"
-                                    alt="PaisibleのWebサイト"
-                            /></a>
-                            <div class="work-card__body">
-                                <div class="work-card__heading">
-                                    <h3>Paisible</h3>
-                                    <a
-                                        href="https://nmhr12.com/paisible"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="Paisibleを新しいタブで開く"
-                                        ><img src="assets/img/link.png" alt=""
-                                    /></a>
-                                </div>
-                                <section class="work-card__section">
-                                    <h4>使用技術</h4>
-                                    <div class="tags">
-                                        <span>HTML</span><span>SCSS</span
-                                        ><span>JavaScript</span>
-                                    </div>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>担当範囲</h4>
-                                    <ul>
-                                        <li>デザインからコーディング</li>
-                                        <li>レスポンシブ対応</li>
-                                        <li>SCSS設計</li>
-                                    </ul>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>工夫した点</h4>
-                                    <p>
-                                        デザインからコーディングまで一貫して自作しました。明るい雰囲気と雰囲気に合うフォントや、写真の見やすさと雰囲気に合う加工をしています。
-                                    </p>
-                                </section>
-                            </div>
-                        </article>
-                        <article class="work-card work-card--featured reveal">
-                            <p class="work-card__featured">Featured Project</p>
-                            <a
-                                class="work-card__image-link"
-                                href="https://jijisite.com/sample-store/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="-1"
-                                ><img
-                                    src="assets/img/sample-store.png"
-                                    alt="Sample StoreのWebサイト"
-                            /></a>
-                            <div class="work-card__body">
-                                <div class="work-card__heading">
-                                    <h3>Sample Store</h3>
-                                    <a
-                                        href="https://jijisite.com/sample-store/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="Sample Storeを新しいタブで開く"
-                                        ><img src="assets/img/link.png" alt=""
-                                    /></a>
-                                </div>
-                                <section class="work-card__section">
-                                    <h4>使用技術</h4>
-                                    <div class="tags">
-                                        <span>HTML</span><span>SCSS</span
-                                        ><span>JavaScript</span>
-                                    </div>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>特徴</h4>
-                                    <div class="tags tags--accent">
-                                        <span>WordPress化予定</span
-                                        ><span>CMS設計</span
-                                        ><span>Firebase連携</span
-                                        ><span>React Nativeアプリ開発</span>
-                                    </div>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>担当範囲</h4>
-                                    <ul>
-                                        <li>デザインからコーディング</li>
-                                        <li>WordPress化</li>
-                                        <li>React Nativeアプリ開発</li>
-                                        <li>Firebase連携</li>
-                                    </ul>
-                                </section>
-                                <section class="work-card__section">
-                                    <h4>工夫した点</h4>
-                                    <p>
-                                        WordPressを想定し、実家で経営しているローカルコンビニをモデルにFigmaAIにデザインをお願いし、コーディングしました。店舗サイトを想定し、お知らせやキャンペーン更新を考慮したWordPress化を前提に設計しました。BEM設計を意識し、再利用性の高いCSS構成を採用。CMSアプリ開発もしています。React
-                                        NativeアプリでFirebase連携もしています。
-                                    </p>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section
-                class="contact"
-                id="contact"
-                aria-labelledby="contact-title"
-            >
-                <div class="container reveal">
-                    <h2 id="contact-title">お問い合わせ</h2>
-                    <p>
-                        ご質問やご相談がございましたら、お気軽にご連絡ください。
-                    </p>
-                    <div class="contact__buttons">
-                        <a
-                            class="button button--primary"
-                            href="mailto:contact@example.com"
-                            ><span aria-hidden="true">✉</span> メールで連絡</a
-                        ><a
-                            class="button button--outline"
-                            href="https://github.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><span aria-hidden="true">♧</span> GitHub</a
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="site-footer">
-            <p>©2026 Portfolio. All rights reserved.</p>
-        </footer>
-    </body>
+          </div>
+          <ol class="about-values">
+            <li class="about-value">
+              <p class="about-value-number">01</p>
+              <h3 class="about-value-title">Design Fidelity</h3>
+              <p class="about-value-label">デザインの再現性</p>
+              <p class="about-value-text">デザインカンプの余白・文字サイズ・配置・配色など、細部まで丁寧に確認しながら実装します。</p>
+            </li>
+            <li class="about-value">
+              <p class="about-value-number">02</p>
+              <h3 class="about-value-title">Maintainability</h3>
+              <p class="about-value-label">保守しやすいコード</p>
+              <p class="about-value-text">分かりやすいクラス名や共通パーツを使用し、後から修正・管理しやすいコードを心がけています。</p>
+            </li>
+            <li class="about-value">
+              <p class="about-value-number">03</p>
+              <h3 class="about-value-title">Usability</h3>
+              <p class="about-value-label">使いやすさへの配慮</p>
+              <p class="about-value-text">レスポンシブ対応に加え、操作性やアクセシビリティにも配慮したサイト制作を目指しています。</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="l-section l-section--surface" id="skills" tabindex="-1" aria-labelledby="skills-heading">
+      <div class="skills-inner l-container">
+        <h2 class="c-section-heading" id="skills-heading">SKILLS</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">使用技術・ツール</p>
+        <p class="c-section-lead skills-lead">これまでに学習・制作で使用してきた技術やツールをご紹介します。</p>
+        <ol class="skills-list">
+          <li class="skills-group">
+            <h3 class="skills-group-title"><span class="skills-group-number">01</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Coding &amp; CMS</span></h3>
+            <ul class="skills-names c-tag-list" aria-label="Coding and CMS">
+              <li><span class="c-tag">HTML</span></li>
+              <li><span class="c-tag">CSS</span></li>
+              <li><span class="c-tag">SCSS</span></li>
+              <li><span class="c-tag">JavaScript</span></li>
+              <li><span class="c-tag">WordPress</span></li>
+              <li><span class="c-tag">PHP</span></li>
+              <li><span class="c-tag">ACF</span></li>
+            </ul>
+          </li>
+          <li class="skills-group">
+            <h3 class="skills-group-title"><span class="skills-group-number">02</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Frontend &amp; Development</span></h3>
+            <ul class="skills-names c-tag-list" aria-label="Frontend and Development">
+              <li><span class="c-tag">React</span></li>
+              <li><span class="c-tag">Next.js</span></li>
+              <li><span class="c-tag">TypeScript</span></li>
+              <li><span class="c-tag">Tailwind CSS</span></li>
+              <li><span class="c-tag">Supabase</span></li>
+            </ul>
+          </li>
+          <li class="skills-group">
+            <h3 class="skills-group-title"><span class="skills-group-number">03</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Design &amp; Tools</span></h3>
+            <ul class="skills-names c-tag-list" aria-label="Design and Tools">
+              <li><span class="c-tag">Figma</span></li>
+              <li><span class="c-tag">Cursor</span></li>
+              <li><span class="c-tag">Git / GitHub</span></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="l-section l-section--sub" id="contact" tabindex="-1" aria-labelledby="contact-heading">
+      <div class="contact-inner l-container">
+        <h2 class="c-section-heading" id="contact-heading">CONTACT</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">お問い合わせ</p>
+        <p class="contact-text">Webサイト制作のご相談など、<span class="contact-text-line">お気軽にお問い合わせください。</span></p>
+        <form class="contact-form" method="post" novalidate aria-describedby="contact-form-note">
+          <p class="contact-form-note" id="contact-form-note">送信機能は準備中です。送信ボタンを押しても、お問い合わせは送信されません。</p>
+          <div class="contact-form-row">
+            <div class="contact-form-field">
+              <label class="contact-form-label" for="contact-name">お名前<span class="contact-form-required">必須</span></label>
+              <input class="contact-form-input" id="contact-name" name="name" type="text" autocomplete="name" placeholder="山田 花子" maxlength="100" required aria-describedby="contact-name-error">
+              <p class="contact-form-error" id="contact-name-error" hidden></p>
+            </div>
+            <div class="contact-form-field">
+              <label class="contact-form-label" for="contact-email">メールアドレス<span class="contact-form-required">必須</span></label>
+              <input class="contact-form-input" id="contact-email" name="email" type="email" autocomplete="email" placeholder="example@mail.com" maxlength="254" required aria-describedby="contact-email-error">
+              <p class="contact-form-error" id="contact-email-error" hidden></p>
+            </div>
+          </div>
+          <div class="contact-form-field">
+            <label class="contact-form-label" for="contact-subject">お問い合わせの種類<span class="contact-form-optional">任意</span></label>
+            <select class="contact-form-select" id="contact-subject" name="subject">
+              <option value="">選択してください</option>
+              <option value="制作のご依頼">制作のご依頼</option>
+              <option value="Webサイトのご相談">Webサイトのご相談</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="contact-form-field">
+            <label class="contact-form-label" for="contact-message">お問い合わせ内容<span class="contact-form-required">必須</span></label>
+            <textarea class="contact-form-textarea" id="contact-message" name="message" placeholder="ご相談内容をご入力ください" maxlength="2000" required aria-describedby="contact-message-error"></textarea>
+            <p class="contact-form-error" id="contact-message-error" hidden></p>
+          </div>
+          <div class="contact-form-submit">
+            <button class="c-button c-button--contact" type="submit">SEND MESSAGE<span class="contact-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <p class="contact-form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="l-footer">
+    <p class="l-footer-copy">© 2026 Portfolio. All rights reserved.</p>
+  </footer>
+  <script src="js/menu.js" defer></script>
+  <script src="js/current-section.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+</body>
 </html>

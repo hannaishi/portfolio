@@ -1,0 +1,21 @@
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .u-skip-link,
+  .c-button,
+  .l-header-logo,
+  .l-header-menu,
+  .l-header-bar,
+  .l-header-nav,
+  .l-header-link,
+  .works-card-image,
+  .works-card-arrow,
+  .contact-arrow,
+  .contact-form-input,
+  .contact-form-select,
+  .contact-form-textarea {
+    transition: none;
+  }
+}

@@ -1,0 +1,141 @@
+@use "../foundation/variables" as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 100svh;
+  padding-top: calc(var(--header-height) + 56px);
+  padding-bottom: 72px;
+  scroll-margin-top: calc(var(--header-height) * -1);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 46% 32% at 8% 0%, rgba(216, 198, 203, 0.38), transparent 70%),
+    radial-gradient(ellipse 40% 28% at 96% 6%, rgba(243, 233, 235, 0.95), transparent 68%),
+    radial-gradient(ellipse 54% 26% at 50% 100%, rgba(216, 198, 203, 0.22), transparent 72%);
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 920px;
+  min-width: 0;
+}
+
+.hero-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35em 0.75em;
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1.6;
+}
+
+.hero-kicker-text {
+  display: inline-block;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 18px 0 0;
+  color: var(--color-heading);
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 9.2vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 0.92;
+}
+
+.hero-title-word {
+  display: block;
+  padding-left: 0.12em;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.hero-line {
+  display: block;
+  width: min(168px, 46%);
+  height: 1px;
+  margin: 28px auto 0;
+  background-color: var(--color-line);
+}
+
+.hero-copy {
+  max-width: 22em;
+  margin: 26px auto 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: clamp(0.9375rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+
+.hero-lead {
+  max-width: 40rem;
+  margin: 18px auto 0;
+  color: var(--color-muted);
+  font-size: clamp(0.78125rem, 3.7vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2;
+}
+
+.hero-lead-line {
+  display: block;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+@media (min-width: $bp-md) {
+  .hero {
+    padding-top: calc(var(--header-height) + 72px);
+    padding-bottom: 96px;
+  }
+
+  .hero-kicker {
+    font-size: 0.9375rem;
+    letter-spacing: 0.28em;
+  }
+
+  .hero-title {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.22em;
+    margin-top: 22px;
+    font-size: clamp(3.75rem, 6vw, 5.75rem);
+    letter-spacing: 0.14em;
+  }
+
+  .hero-title-word {
+    padding-left: 0.14em;
+  }
+
+  .hero-line {
+    width: 220px;
+    margin-top: 34px;
+  }
+
+  .hero-copy {
+    margin-top: 30px;
+  }
+
+}

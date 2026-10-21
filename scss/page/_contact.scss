@@ -1,0 +1,205 @@
+@use "../foundation/variables" as *;
+
+.contact-inner {
+  min-width: 0;
+}
+
+.contact-text {
+  max-width: 36em;
+  margin: 20px auto 0;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: var(--line-height-body);
+}
+
+.contact-text-line {
+  display: inline-block;
+}
+
+.contact-form {
+  --color-error: #8a3d4b;
+  display: grid;
+  gap: 28px;
+  width: min(100%, 740px);
+  margin: 64px auto 0;
+  text-align: left;
+}
+
+.contact-form-note {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  min-width: 0;
+}
+
+.contact-form-field {
+  min-width: 0;
+}
+
+.contact-form-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.contact-form-required,
+.contact-form-optional {
+  flex-shrink: 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.contact-form-input,
+.contact-form-select,
+.contact-form-textarea {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  box-shadow: inset 0 -1px 0 var(--color-line);
+  color: var(--color-text);
+  font-size: 1rem;
+  letter-spacing: 0;
+  transition: box-shadow var(--motion-duration) var(--motion-ease);
+}
+
+.contact-form-input,
+.contact-form-select {
+  height: 52px;
+  padding: 0 16px;
+}
+
+.contact-form-textarea {
+  min-height: 180px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.contact-form-select {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23453B3E' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.contact-form-input:focus,
+.contact-form-select:focus,
+.contact-form-textarea:focus {
+  box-shadow: inset 0 -2px 0 var(--color-button);
+}
+
+.contact-form-field.is-error .contact-form-input,
+.contact-form-field.is-error .contact-form-select,
+.contact-form-field.is-error .contact-form-textarea {
+  box-shadow: inset 0 -2px 0 var(--color-error);
+}
+
+.contact-form-error {
+  margin: 8px 0 0;
+  color: var(--color-error);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.contact-form-error[hidden] {
+  display: none;
+}
+
+.contact-form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-arrow {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.875rem;
+  line-height: 1;
+  transition: transform var(--motion-duration) var(--motion-ease);
+}
+
+.c-button--contact:hover .contact-arrow,
+.c-button--contact:focus-visible .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+.contact-form-message {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-form-message:empty {
+  display: none;
+}
+
+.contact-form-message--success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-surface);
+  text-align: left;
+}
+
+.contact-form-message--success::before {
+  content: "✓";
+  color: var(--color-button);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.contact-form-message--error {
+  padding: 16px 20px;
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
+
+@media (min-width: $bp-md) {
+  .contact-form {
+    margin-top: 80px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 32px;
+  }
+}
