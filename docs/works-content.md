@@ -50,7 +50,40 @@ MORISITAのHTML/CSSは既存の静的コーディング担当情報と今回の�
 
 シーメイト東北部はコーディング前のため技術タグ・「意識したポイント」を出力していません。
 Juicy Mamaはヘッダー・ヒーローまでの制作中としており、完成済みサイトとは記載していません。
-意識したポイントは既存の担当範囲・説明文を整理したもので、未確認の制作エピソードは加えていません。
+意識したポイントは下記の作品コード、または既存の具体的な制作情報から確認できた内容だけを掲載しています。
+担当範囲を言い換えただけの文章は削除し、根拠不足の項目は非表示にしています。
+
+## 追加の文章・作品コード確認（2026-10-24）
+
+Sample StoreとLuciaの制作背景は今回のユーザー回答を正とし、実在する店舗・婦人科クリニックから
+着想を得た自主制作であって、公式サイトや受託案件ではないことを明記しています。
+
+確認したコードは参照用に読み取っただけで、作品本体のリポジトリは変更していません。
+
+| 作品 | 確認元 | 文章に反映した内容 |
+| --- | --- | --- |
+| Lucia | [06c487a / assets/js/main.js](https://github.com/hannaishi/lucia/blob/06c487a716f8e6913c411a2837689d90e9b8072a/assets/js/main.js)、[layout/_header.scss](https://github.com/hannaishi/lucia/blob/06c487a716f8e6913c411a2837689d90e9b8072a/assets/scss/layout/_header.scss)、[top/_hero.scss](https://github.com/hannaishi/lucia/blob/06c487a716f8e6913c411a2837689d90e9b8072a/assets/scss/page/top/_hero.scss)、[top/_features.scss](https://github.com/hannaishi/lucia/blob/06c487a716f8e6913c411a2837689d90e9b8072a/assets/scss/page/top/_features.scss) | SPの文字・画像位置・カード列数調整、メニュー開閉とinert・Escape・フォーカス復帰、FAQのhidden／aria-expanded連動 |
+| Sample Store | [0da208f / functions.php](https://github.com/hannaishi/sample-store-wp/blob/0da208fadf69e4268bee2d5f96bd8cd6a0f3ee36/functions.php)、[front-page.php](https://github.com/hannaishi/sample-store-wp/blob/0da208fadf69e4268bee2d5f96bd8cd6a0f3ee36/front-page.php) | 商品・サービス・お知らせのカスタム投稿分離、ACFでのサービス説明・採用情報の読み出し |
+| 武者への道 | [3021408 / template-parts/post-card.php](https://github.com/hannaishi/road-to-musha/blob/3021408f3df1f33280b7562e69f4ac7e65116e06/template-parts/post-card.php)、[includes/query.php](https://github.com/hannaishi/road-to-musha/blob/3021408f3df1f33280b7562e69f4ac7e65116e06/includes/query.php)、[includes/admin.php](https://github.com/hannaishi/road-to-musha/blob/3021408f3df1f33280b7562e69f4ac7e65116e06/includes/admin.php) | ACFのカテゴリー色、メニューからのピックアップ指定と一覧からの重複除外、更新担当者の管理メニュー整理 |
+| Paisible | [8af0410 / assets/js/main.js](https://github.com/hannaishi/paisible/blob/8af0410ef1093b8874563b3e910fb2bbd71b0e7c/assets/js/main.js) | SPメニューのフォーカス移動・リンク選択時の閉鎖・Escape操作、動きを減らす設定時の表示演出の切り替え |
+
+コードを確認できた、という記載はソースの静的調査を意味します。作品本体の本番環境・
+WordPressの動作環境全体をテストしたものではありません。
+
+以下は確認事項として保留しています。
+
+- MORISITA：課題制作・10ページ・約1か月・静的制作からWordPress化までの背景はユーザー確認済み。
+  作品本体のコードとFigmaデータを確認できていないため、デザイン再現・レスポンシブの具体的な調整・
+  ACF／カスタム投稿の設計上の工夫は未記載です。対応範囲を繰り返すだけだったポイントは非表示にしました。
+  追加で共有された `https://morisita.nmhr12.com/wp-admin/` も、環境のプロキシでCONNECT 403となり取得できませんでした。
+- SUPPLE・NEXTA・Juicy Mama・Cafe Calmati：具体的な工夫を裏付ける作品コードを確認できていないため、
+  担当範囲の繰り返しになっていたポイントを非表示にしています。背景は確認済みの制作形態・題材・担当範囲に限定しています。
+- シーメイト東北部：制作予定という状況を背景に整理し、未実装の工夫は追加していません。
+- Matsuyama Clinic：既存のWORKS情報にある1ページ構成とエントリーへのページ内リンクのみを説明しています。
+  作品本体のリポジトリを確認できず、公開URLもプロキシのCONNECT 403で取得できなかったため、
+  JavaScriptタグは引き続き保留です。メニューの見た目だけからJavaScript実装を推測していません。
+  追加共有された `https://nmhr12.com/coding-task/matsuyama-clinic` でも同じ接続拒否を確認しています。
+- その他の自主制作について、着想の経緯や個別の判断理由は未確認です。コードの動作から説明できる範囲を超える制作エピソードは創作していません。
 
 ## 不足情報
 
@@ -74,3 +107,24 @@ JS無効時はフィルターを表示せず、11作品・詳細リンクはす�
 
 Google Fontsが環境のネットワーク制限で取得できない場合、表示検証は既存指定の代替フォントで行います。
 書体指定自体は変更していません。
+
+## ローカル表示とスクリーンショット
+
+リポジトリを取得し、今回の修正ブランチをチェックアウトしてから、リポジトリ直下で起動します。
+
+```sh
+git fetch origin
+git switch fix/works-detail-copy
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+次のURLをChromeなどで開き、開発者ツールのデバイスツールバーをResponsiveにして
+幅1440px／390px・ズーム100%でそれぞれ確認できます。
+
+- TOP WORKS：`http://127.0.0.1:8000/#works`
+- WORKS一覧：`http://127.0.0.1:8000/works/`
+- Lucia詳細：`http://127.0.0.1:8000/works/lucia/`
+
+Chromeでは開発者ツールのコマンドメニューで「Capture full size screenshot」を実行すると、
+各ページの全体画像を保存できます。TOPはWORKS部分を確認してください。
+Xserverへのアップロードは不要です。
