@@ -298,7 +298,7 @@
         <span class="c-section-line" aria-hidden="true"></span>
         <p class="c-section-subheading">お問い合わせ</p>
         <p class="contact-text">Webサイト制作のご相談など、<span class="contact-text-line">お気軽にお問い合わせください。</span></p>
-        <form class="contact-form" method="post" novalidate aria-describedby="contact-form-note">
+        <form class="contact-form" action="api/contact.php" method="post" novalidate aria-describedby="contact-form-note">
           <p class="contact-form-note" id="contact-form-note">送信機能は準備中です。送信ボタンを押しても、お問い合わせは送信されません。</p>
           <div class="contact-form-row">
             <div class="contact-form-field">
@@ -314,17 +314,22 @@
           </div>
           <div class="contact-form-field">
             <label class="contact-form-label" for="contact-subject">お問い合わせの種類<span class="contact-form-optional">任意</span></label>
-            <select class="contact-form-select" id="contact-subject" name="subject">
+            <select class="contact-form-select" id="contact-subject" name="subject" aria-describedby="contact-subject-error">
               <option value="">選択してください</option>
               <option value="制作のご依頼">制作のご依頼</option>
               <option value="Webサイトのご相談">Webサイトのご相談</option>
               <option value="その他">その他</option>
             </select>
+            <p class="contact-form-error" id="contact-subject-error" hidden></p>
           </div>
           <div class="contact-form-field">
             <label class="contact-form-label" for="contact-message">お問い合わせ内容<span class="contact-form-required">必須</span></label>
             <textarea class="contact-form-textarea" id="contact-message" name="message" placeholder="ご相談内容をご入力ください" maxlength="2000" required aria-describedby="contact-message-error"></textarea>
             <p class="contact-form-error" id="contact-message-error" hidden></p>
+          </div>
+          <div hidden aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
           <div class="contact-form-submit">
             <button class="c-button c-button--contact" type="submit">SEND MESSAGE<span class="contact-arrow" aria-hidden="true">↗</span></button>

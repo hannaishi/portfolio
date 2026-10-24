@@ -1,0 +1,4 @@
+# Production mail settings and private rate-limit storage must never be committed.
+contact-config.php
+contact-config.local.php
+portfolio-private/
