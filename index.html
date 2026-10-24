@@ -50,8 +50,21 @@
         <span class="c-section-line" aria-hidden="true"></span>
         <p class="c-section-subheading">私について</p>
         <div class="about-profile-card">
-          <!-- 氏名・活動地域は確定後にdt/ddの項目を追加。未入力の個人情報は表示しません。 -->
-          <dl class="about-profile-grid">
+          <div class="about-card-layout">
+            <section class="about-card-area" aria-labelledby="profile-heading" data-profile-status="temporary">
+              <h3 class="about-card-heading" id="profile-heading">PROFILE</h3>
+              <!-- 以下の5項目はすべて確認用の仮情報です。正式情報へ差し替えるまで公開用mainにマージしないでください。SEOメタ情報・構造化データへの流用は禁止です。 -->
+              <dl class="about-personal-list">
+                <div class="about-personal-row"><dt>名前</dt><dd>山田 太郎</dd></div>
+                <div class="about-personal-row"><dt>年齢</dt><dd>30歳</dd></div>
+                <div class="about-personal-row"><dt>現在の職業</dt><dd>〇〇で法人営業</dd></div>
+                <div class="about-personal-row"><dt>居住地</dt><dd>東京都在住</dd></div>
+                <div class="about-personal-row"><dt>スキルセット</dt><dd>HTML・CSS / JavaScript / WordPress</dd></div>
+              </dl>
+            </section>
+            <section class="about-card-area" aria-labelledby="availability-heading">
+              <h3 class="about-card-heading" id="availability-heading">AVAILABILITY</h3>
+              <dl class="about-profile-grid">
             <div class="about-profile-field">
               <dt class="about-profile-label">稼働可能時間</dt>
               <dd class="about-profile-text">
@@ -67,6 +80,8 @@
               </dd>
             </div>
           </dl>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -166,36 +181,41 @@
         <h2 class="c-section-heading" id="skills-heading">SKILLS</h2>
         <span class="c-section-line" aria-hidden="true"></span>
         <p class="c-section-subheading">使用技術・ツール</p>
-        <p class="c-section-lead skills-lead">これまでに学習・制作で使用してきた技術やツールをご紹介します。</p>
+        <p class="c-section-lead skills-lead">HTML・SCSS・JavaScriptを用いた静的サイト制作や、WordPressのオリジナルテーマ制作で使用している技術・ツールをご紹介します。</p>
         <ol class="skills-list">
           <li class="skills-group">
-            <h3 class="skills-group-title"><span class="skills-group-number">01</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Coding &amp; CMS</span></h3>
-            <ul class="skills-names c-tag-list" aria-label="Coding and CMS">
+            <div class="skills-group-heading">
+              <h3 class="skills-group-title" id="skills-group-1"><span class="skills-group-number">01</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Frontend Coding</span></h3>
+              <p class="skills-group-description">静的サイト制作・レスポンシブ対応</p>
+            </div>
+            <ul class="skills-names c-tag-list" aria-labelledby="skills-group-1">
               <li><span class="c-tag">HTML</span></li>
               <li><span class="c-tag">CSS</span></li>
               <li><span class="c-tag">SCSS</span></li>
               <li><span class="c-tag">JavaScript</span></li>
+            </ul>
+          </li>
+          <li class="skills-group">
+            <div class="skills-group-heading">
+              <h3 class="skills-group-title" id="skills-group-2"><span class="skills-group-number">02</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">WordPress &amp; CMS</span></h3>
+              <p class="skills-group-description">オリジナルテーマ制作・更新機能の実装</p>
+            </div>
+            <ul class="skills-names c-tag-list" aria-labelledby="skills-group-2">
               <li><span class="c-tag">WordPress</span></li>
               <li><span class="c-tag">PHP</span></li>
               <li><span class="c-tag">ACF</span></li>
             </ul>
           </li>
           <li class="skills-group">
-            <h3 class="skills-group-title"><span class="skills-group-number">02</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Frontend &amp; Development</span></h3>
-            <ul class="skills-names c-tag-list" aria-label="Frontend and Development">
-              <li><span class="c-tag">React</span></li>
-              <li><span class="c-tag">Next.js</span></li>
-              <li><span class="c-tag">TypeScript</span></li>
-              <li><span class="c-tag">Tailwind CSS</span></li>
-              <li><span class="c-tag">Supabase</span></li>
-            </ul>
-          </li>
-          <li class="skills-group">
-            <h3 class="skills-group-title"><span class="skills-group-number">03</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Design &amp; Tools</span></h3>
-            <ul class="skills-names c-tag-list" aria-label="Design and Tools">
+            <div class="skills-group-heading">
+              <h3 class="skills-group-title" id="skills-group-3"><span class="skills-group-number">03</span><span class="skills-group-slash" aria-hidden="true">/</span><span class="skills-group-name">Design &amp; Development Tools</span></h3>
+              <p class="skills-group-description">デザイン確認・制作・バージョン管理</p>
+            </div>
+            <ul class="skills-names c-tag-list" aria-labelledby="skills-group-3">
               <li><span class="c-tag">Figma</span></li>
-              <li><span class="c-tag">Cursor</span></li>
               <li><span class="c-tag">Git / GitHub</span></li>
+              <li><span class="c-tag">Cursor</span></li>
+              <li><span class="c-tag">Codex</span></li>
             </ul>
           </li>
         </ol>
