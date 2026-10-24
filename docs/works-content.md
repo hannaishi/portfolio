@@ -38,13 +38,13 @@ HTMLだけを直接編集すると、次回生成時に上書きされます。H
 | Lucia | 自主制作 | HTML/CSS・JavaScript | 未確認 | 未確認 |
 | Juicy Mama | 自主制作 | HTML/CSS・JavaScript | 未確認 | 未確認 |
 | シーメイト東北部 | 自主制作 | なし（コーディング前） | 未確認 | 未確認 |
-| Matsuyama Clinic | 課題制作 | HTML/CSS | 1ページ | 1週間 |
+| Matsuyama Clinic | 課題制作 | HTML/CSS・JavaScript | 1ページ | 1週間 |
 | Cafe Calmati | 自主制作 | HTML/CSS・JavaScript | 未確認 | 未確認 |
 | Paisible | 自主制作 | HTML/CSS・JavaScript | 未確認 | 未確認 |
 | Sample Store | 自主制作 | HTML/CSS・JavaScript・WordPress | 未確認 | 未確認 |
 
 技術タグと対応範囲・背景は、main `1d191e5` の既存WORKSカードと上記回答に基づいています。
-Matsuyama Clinicは今回の回答で確認できたHTML/CSSのみを掲載し、元のJavaScriptタグは保留しました。
+Matsuyama Clinicは修復済みの作品コードでJavaScript実装を確認し、JavaScriptタグを追加しました。
 SUPPLE・武者への道はWordPress化のみの担当として、HTML/CSSを担当技術に追加していません。
 MORISITAのHTML/CSSは既存の静的コーディング担当情報と今回の回答に基づきます。
 
@@ -72,18 +72,39 @@ WordPressの動作環境全体をテストしたものではありません。
 
 以下は確認事項として保留しています。
 
-- MORISITA：課題制作・10ページ・約1か月・静的制作からWordPress化までの背景はユーザー確認済み。
-  作品本体のコードとFigmaデータを確認できていないため、デザイン再現・レスポンシブの具体的な調整・
-  ACF／カスタム投稿の設計上の工夫は未記載です。対応範囲を繰り返すだけだったポイントは非表示にしました。
-  追加で共有された `https://morisita.nmhr12.com/wp-admin/` も、環境のプロキシでCONNECT 403となり取得できませんでした。
 - SUPPLE・NEXTA・Juicy Mama・Cafe Calmati：具体的な工夫を裏付ける作品コードを確認できていないため、
   担当範囲の繰り返しになっていたポイントを非表示にしています。背景は確認済みの制作形態・題材・担当範囲に限定しています。
 - シーメイト東北部：制作予定という状況を背景に整理し、未実装の工夫は追加していません。
-- Matsuyama Clinic：既存のWORKS情報にある1ページ構成とエントリーへのページ内リンクのみを説明しています。
-  作品本体のリポジトリを確認できず、公開URLもプロキシのCONNECT 403で取得できなかったため、
-  JavaScriptタグは引き続き保留です。メニューの見た目だけからJavaScript実装を推測していません。
-  追加共有された `https://nmhr12.com/coding-task/matsuyama-clinic` でも同じ接続拒否を確認しています。
 - その他の自主制作について、着想の経緯や個別の判断理由は未確認です。コードの動作から説明できる範囲を超える制作エピソードは創作していません。
+
+## MORISITA・Matsuyama Clinicの保留解消
+
+ABOUT・CAREER・STRENGTHS改修に合わせて、以下の実装を確認しました。作品リポジトリは読み取りのみで変更していません。
+
+### MORISITA
+
+- 静的版：`hannaishi/morisita` の `main`、コミット `aad310e32380aba0fb1947ac4ef24aa41366e5f6`。
+- WordPress版：`hannaishi/morisita-wp` の既定ブランチ **master**、コミット `b07c81d30ed431216b202c95f1252f94a9f3861a`。
+- Figmaのデザインカンプに合わせて調整した制作経緯は、今回のユーザー確認に基づきます。Figmaファイルと画面を直接比較したという意味ではありません。
+- 静的版の[SCSS](https://github.com/hannaishi/morisita/tree/aad310e32380aba0fb1947ac4ef24aa41366e5f6/scss)で、ブレークポイント、余白・文字サイズ・段組み、PC/SP画像の切り替えを確認。
+- WordPress版の[front-page.php](https://github.com/hannaishi/morisita-wp/blob/b07c81d30ed431216b202c95f1252f94a9f3861a/front-page.php)、[single-business.php](https://github.com/hannaishi/morisita-wp/blob/b07c81d30ed431216b202c95f1252f94a9f3861a/single-business.php)、[inc/setup.php](https://github.com/hannaishi/morisita-wp/blob/b07c81d30ed431216b202c95f1252f94a9f3861a/inc/setup.php)で、news・product・businessのカスタム投稿を扱うクエリ・テンプレートを確認。投稿タイプの登録自体はCPT UI等の環境側設定を前提としているため、テーマに登録処理があるとは記載していません。
+- [inc/product.php](https://github.com/hannaishi/morisita-wp/blob/b07c81d30ed431216b202c95f1252f94a9f3861a/inc/product.php)と[ACF JSON](https://github.com/hannaishi/morisita-wp/tree/b07c81d30ed431216b202c95f1252f94a9f3861a/acf-json)で、製品仕様・画像等のフィールド定義と読み出しを確認。
+- [single-news.php](https://github.com/hannaishi/morisita-wp/blob/b07c81d30ed431216b202c95f1252f94a9f3861a/single-news.php)でアイキャッチ未設定時のロゴ代替表示、single-business.phpで画像未設定時の既定画像を確認。
+
+上記に基づいて、デザイン再現・更新しやすさ・画像未設定時の表示の3点を追加しました。WordPress本番環境全体の実行検証や成果数値の評価は行っていません。
+
+### Matsuyama Clinic
+
+修復済み `hannaishi/matsuyama-clinic` のmain `837653c7cfcd0e8e483bf7d0e89926f2765e7f1b` を読み取り、次を確認しています。
+[確認したJavaScript一式](https://github.com/hannaishi/matsuyama-clinic/tree/837653c7cfcd0e8e483bf7d0e89926f2765e7f1b/js)
+
+- `js/main.js`：3モジュールのimportと初期化、固定ヘッダーの高さを差し引いたスムーススクロール。
+- `js/component/hamburger-menu.js`：メニュー開閉、bodyスクロール固定、inert・aria状態、Escape、メニュー内リンク選択時の閉鎖。
+- `js/component/header-background-toggle.js`：ヒーロー高さを基準にしたヘッダー背景切り替え。
+- `js/slider/gallery-slider.js`：SPだけで有効になるポインタードラッグと停止処理。
+
+Portfolioの技術カテゴリーにJavaScriptを追加し、上記を3つのポイントに整理しました。
+フィルター種類は変わらず、JavaScriptに該当する件数だけ6件から7件になります。
 
 ## 不足情報
 
@@ -92,7 +113,7 @@ WordPressの動作環境全体をテストしたものではありません。
 - 全作品の公開状態・正しい公開URLの最終確認が必要です。URL未登録はNEXTA・Lucia・
   Juicy Mama・シーメイト東北部・Cafe Calmatiです。
 - 今後の確認で技術や制作内容が更新された場合はデータを訂正してください。
-  特に制作途中のJuicy MamaのJavaScriptとMatsuyama ClinicのJavaScript有無は、作品本体のコード確認で確定できます。
+  特に制作途中のJuicy MamaのJavaScriptは、作品本体のコード確認が必要です。
 
 ## ページと動作
 
@@ -114,7 +135,7 @@ Google Fontsが環境のネットワーク制限で取得できない場合、�
 
 ```sh
 git fetch origin
-git switch fix/works-detail-copy
+git switch feat/about-career-strengths
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 

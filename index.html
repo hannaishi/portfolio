@@ -22,8 +22,8 @@
       </button>
       <nav class="l-header-nav" id="header-nav" aria-label="メインメニュー">
         <ul class="l-header-list">
-          <li><a class="l-header-link" href="#works">WORKS</a></li>
           <li><a class="l-header-link" href="#about">ABOUT</a></li>
+          <li><a class="l-header-link" href="#works">WORKS</a></li>
           <li><a class="l-header-link" href="#skills">SKILLS</a></li>
           <li><a class="l-header-link" href="#contact">CONTACT</a></li>
         </ul>
@@ -41,6 +41,32 @@
         <div class="hero-actions">
           <a class="c-button" href="#works">制作実績を見る</a>
           <a class="c-button c-button--outline" href="#about">私について</a>
+        </div>
+      </div>
+    </section>
+    <section class="l-section l-section--sub" id="about" tabindex="-1" aria-labelledby="about-heading">
+      <div class="about-inner l-container">
+        <h2 class="c-section-heading about-heading" id="about-heading">ABOUT ME</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">私について</p>
+        <div class="about-profile-card">
+          <!-- 氏名・活動地域は確定後にdt/ddの項目を追加。未入力の個人情報は表示しません。 -->
+          <dl class="about-profile-grid">
+            <div class="about-profile-field">
+              <dt class="about-profile-label">稼働可能時間</dt>
+              <dd class="about-profile-text">
+                <p>平日：9:00〜16:00</p>
+                <p>土日祝：ご依頼内容や納期に応じて柔軟に対応いたします。</p>
+              </dd>
+            </div>
+            <div class="about-profile-field">
+              <dt class="about-profile-label">ご連絡可能時間</dt>
+              <dd class="about-profile-text">
+                <p>平日：9:00〜16:00</p>
+                <p>土日祝：原則24時間以内にご返信いたします。</p>
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
@@ -135,44 +161,7 @@
         <div class="works-all"><a class="c-button c-button--outline" href="works/">VIEW ALL WORKS <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
-    <section class="l-section l-section--sub" id="about" tabindex="-1" aria-labelledby="about-heading">
-      <div class="about-inner l-container">
-        <h2 class="c-section-heading about-heading" id="about-heading">ABOUT ME</h2>
-        <span class="c-section-line" aria-hidden="true"></span>
-        <p class="c-section-subheading">私について</p>
-        <div class="about-layout">
-          <div class="about-copy">
-            <p class="about-lead">デザインの細部まで大切に、<span class="about-lead-line">丁寧なWebサイト制作を。</span></p>
-            <div class="about-text">
-              <p class="about-paragraph">HTML・SCSS・JavaScriptによるコーディングを中心に、WordPressのオリジナルテーマ制作にも取り組んでいます。</p>
-              <p class="about-paragraph">デザインの意図を汲み取り、余白や文字サイズ、レスポンシブでの見え方まで丁寧に調整することを心がけています。</p>
-              <p class="about-paragraph">また、更新や修正がしやすいコード設計を大切にしています。</p>
-            </div>
-          </div>
-          <ol class="about-values">
-            <li class="about-value">
-              <p class="about-value-number">01</p>
-              <h3 class="about-value-title">Design Fidelity</h3>
-              <p class="about-value-label">デザインの再現性</p>
-              <p class="about-value-text">デザインカンプの余白・文字サイズ・配置・配色など、細部まで丁寧に確認しながら実装します。</p>
-            </li>
-            <li class="about-value">
-              <p class="about-value-number">02</p>
-              <h3 class="about-value-title">Maintainability</h3>
-              <p class="about-value-label">保守しやすいコード</p>
-              <p class="about-value-text">分かりやすいクラス名や共通パーツを使用し、後から修正・管理しやすいコードを心がけています。</p>
-            </li>
-            <li class="about-value">
-              <p class="about-value-number">03</p>
-              <h3 class="about-value-title">Usability</h3>
-              <p class="about-value-label">使いやすさへの配慮</p>
-              <p class="about-value-text">レスポンシブ対応に加え、操作性やアクセシビリティにも配慮したサイト制作を目指しています。</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <section class="l-section l-section--surface" id="skills" tabindex="-1" aria-labelledby="skills-heading">
+    <section class="l-section l-section--sub" id="skills" tabindex="-1" aria-labelledby="skills-heading">
       <div class="skills-inner l-container">
         <h2 class="c-section-heading" id="skills-heading">SKILLS</h2>
         <span class="c-section-line" aria-hidden="true"></span>
@@ -212,7 +201,78 @@
         </ol>
       </div>
     </section>
-    <section class="l-section l-section--sub" id="contact" tabindex="-1" aria-labelledby="contact-heading">
+    <section class="l-section l-section--surface" id="career" tabindex="-1" aria-labelledby="career-heading">
+      <div class="career-inner l-container">
+        <h2 class="c-section-heading" id="career-heading">CAREER</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">これまでの経験</p>
+        <ol class="career-list">
+          <li class="career-item">
+            <p class="career-period"><time datetime="2024-08">2024年8月</time>〜現在</p>
+            <div class="career-body">
+              <h3 class="career-title">一般事務・SNS運用</h3>
+              <p class="career-text">Excelを使用した事務業務に加え、Instagramの投稿作成などにも携わっています。</p>
+            </div>
+          </li>
+          <li class="career-item">
+            <p class="career-period"><time datetime="2022-07">2022年7月</time>〜<time datetime="2022-08">8月</time></p>
+            <div class="career-body">
+              <h3 class="career-title">業務システム移行支援</h3>
+              <p class="career-text">kintoneからSalesforceへの移行に関わり、要件整理、業務フローの作成、ヒアリング内容の整理などを担当しました。</p>
+            </div>
+          </li>
+          <li class="career-item">
+            <p class="career-period"><time datetime="2018-04">2018年4月</time>〜<time datetime="2021-11">2021年11月</time></p>
+            <div class="career-body">
+              <h3 class="career-title">店舗運営</h3>
+              <p class="career-text">小売店舗での接客、商品企画、発注、調理、シフト管理など、日々の店舗運営業務に携わりました。</p>
+            </div>
+          </li>
+          <li class="career-item">
+            <p class="career-period"><time datetime="2015-05">2015年5月</time>〜<time datetime="2017-08">2017年8月</time></p>
+            <div class="career-body">
+              <h3 class="career-title">システムエンジニア</h3>
+              <p class="career-text">業務システムの開発・保守に従事。SQL・VBA・Shellなどを使用し、テスト、進捗管理、ドキュメント作成にも携わりました。</p>
+            </div>
+          </li>
+          <li class="career-item">
+            <p class="career-period"><time datetime="2010-11">2010年11月</time>〜<time datetime="2011-05">2011年5月</time></p>
+            <div class="career-body">
+              <h3 class="career-title">通訳アシスタント</h3>
+              <p class="career-text">会議やスケジュールの調整、資料作成など、業務を円滑に進めるためのサポートを担当しました。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="l-section l-section--sub" id="strengths" tabindex="-1" aria-labelledby="strengths-heading">
+      <div class="strengths-inner l-container">
+        <h2 class="c-section-heading strengths-heading" id="strengths-heading">STRENGTHS</h2>
+        <span class="c-section-line" aria-hidden="true"></span>
+        <p class="c-section-subheading">私の強み</p>
+        <ol class="strengths-list">
+            <li class="strengths-item">
+              <p class="strengths-number">01</p>
+              <h3 class="strengths-title">Design Fidelity</h3>
+              <p class="strengths-label">デザインの再現性</p>
+              <p class="strengths-text">デザインカンプの余白・文字サイズ・配置・配色など、細部まで丁寧に確認しながら実装します。</p>
+            </li>
+            <li class="strengths-item">
+              <p class="strengths-number">02</p>
+              <h3 class="strengths-title">Maintainability</h3>
+              <p class="strengths-label">保守しやすいコード</p>
+              <p class="strengths-text">分かりやすいクラス名や共通パーツを使用し、後から修正・管理しやすいコードを心がけています。</p>
+            </li>
+            <li class="strengths-item">
+              <p class="strengths-number">03</p>
+              <h3 class="strengths-title">Usability</h3>
+              <p class="strengths-label">使いやすさへの配慮</p>
+              <p class="strengths-text">レスポンシブ対応に加え、操作性やアクセシビリティにも配慮したサイト制作を目指しています。</p>
+            </li>
+          </ol>
+      </div>
+    </section>
+    <section class="l-section l-section--surface" id="contact" tabindex="-1" aria-labelledby="contact-heading">
       <div class="contact-inner l-container">
         <h2 class="c-section-heading" id="contact-heading">CONTACT</h2>
         <span class="c-section-line" aria-hidden="true"></span>
