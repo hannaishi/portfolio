@@ -19,8 +19,8 @@
       "ニュース・製品・事業紹介を種類ごとのカスタム投稿で扱い、製品の仕様などをACFの入力欄から更新できる構成にしています。",
       "ニュースのアイキャッチ画像が未設定の場合はロゴ画像に切り替えるなど、画像がない状態でも代替表示が出るようにしています。"
     ],
-    "published": false,
-    "siteUrl": "https://nmhr12.com/coding-task/morisita/"
+    "published": true,
+    "siteUrl": "https://nmhr12.com/morisita"
   },
   {
     "slug": "road-to-musha",
@@ -41,8 +41,8 @@
       "ピックアップ記事を管理画面のメニューから指定できるようにし、同じ記事がTOPの通常一覧に重複しないようクエリで除外しています。",
       "更新担当者の画面では不要な管理メニューを隠し、記事更新に使う項目を見つけやすくする処理を用意しています。"
     ],
-    "published": false,
-    "siteUrl": "https://road-to-musha.nmhr12.com/"
+    "published": true,
+    "siteUrl": "https://nmhr12.com/road-to-musha"
   },
   {
     "slug": "supple",
@@ -59,8 +59,8 @@
     "period": "2週間（WordPress化のみ）",
     "background": "コーヒーを扱うカフェサイトを題材に、既存の静的サイトをWordPress化する課題に取り組みました。担当は10ページのWordPress化で、制作期間は2週間です。",
     "points": [],
-    "published": false,
-    "siteUrl": "https://supple.nmhr12.com/"
+    "published": true,
+    "siteUrl": "https://nmhr12.com/supple"
   },
   {
     "slug": "nexta",
@@ -78,8 +78,8 @@
     "period": null,
     "background": "Web制作会社のサイトを題材にした自主制作作品です。静的サイトのコーディングとレスポンシブ対応に取り組みました。",
     "points": [],
-    "published": false,
-    "siteUrl": null
+    "published": true,
+    "siteUrl": "https://nmhr12.com/nexta"
   },
   {
     "slug": "lucia",
@@ -101,8 +101,8 @@
       "SPメニューは開いたときにナビゲーションへフォーカスを移し、閉じた状態では操作対象から外します。Escapeキーで閉じた際にボタンへフォーカスを戻す処理も実装しています。",
       "FAQは質問ごとのボタンで開閉し、回答の表示とaria-expandedの状態を連動させています。"
     ],
-    "published": false,
-    "siteUrl": null
+    "published": true,
+    "siteUrl": "https://nmhr12.com/coding-task/lucia"
   },
   {
     "slug": "juicy-mama",
@@ -159,8 +159,8 @@
       "スクロール位置に応じてヘッダーの背景を切り替え、ページ内リンクは固定ヘッダーの高さを差し引いた位置へ移動するよう調整しています。",
       "新着情報のギャラリーはSPで横方向にドラッグできるようにし、PCではドラッグ処理を行わず画面幅に合った操作に切り替えています。"
     ],
-    "published": false,
-    "siteUrl": "https://nmhr12.com/coding-task/matsuyama-clinic/"
+    "published": true,
+    "siteUrl": "https://nmhr12.com/coding-task/matsuyama-clinic"
   },
   {
     "slug": "cafe-calmati",
@@ -200,7 +200,7 @@
       "SPメニューでは、開くとナビゲーションの先頭へフォーカスを移し、ページ内リンクを選択したときやEscapeキーを押したときに閉じる処理を実装しています。",
       "スクロール時の表示演出は、動きを減らす設定ではアニメーションを行わずに内容を表示し、閲覧環境に合わせて切り替えています。"
     ],
-    "published": false,
+    "published": true,
     "siteUrl": "https://nmhr12.com/paisible/"
   },
   {
