@@ -1121,122 +1121,66 @@ body.is-menu-open {
   letter-spacing: 0.1em;
 }
 
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
+.about-profile-card {
   margin-top: 56px;
+  padding: 28px 24px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
   text-align: left;
 }
 
-.about-copy {
+.about-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  margin: 0;
+}
+
+.about-profile-field {
   min-width: 0;
 }
 
-.about-lead {
-  margin: 0;
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.7;
-}
-
-.about-lead-line {
-  display: inline-block;
-}
-
-.about-text {
-  margin-top: 28px;
-}
-
-.about-paragraph {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: var(--line-height-body);
-}
-
-.about-paragraph + .about-paragraph {
-  margin-top: 1.4em;
-}
-
-.about-values {
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid var(--color-line);
-  list-style: none;
-}
-
-.about-value {
-  padding: 28px 0;
+.about-profile-field + .about-profile-field {
+  padding-top: 28px;
   border-top: 1px solid var(--color-line);
 }
 
-.about-value-number {
-  margin: 0;
-  color: var(--color-button);
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  line-height: 1;
-}
-
-.about-value-title {
-  margin: 10px 0 0;
+.about-profile-label {
+  margin: 0 0 16px;
   color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: clamp(1.625rem, 2.4vw, 2rem);
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  line-height: 1.25;
-}
-
-.about-value-label {
-  margin: 8px 0 0;
-  color: var(--color-muted);
   font-family: var(--font-serif);
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
   line-height: 1.6;
+  letter-spacing: 0.06em;
 }
 
-.about-value-text {
-  margin: 12px 0 0;
+.about-profile-text {
+  margin: 0;
   color: var(--color-text);
   font-size: 0.875rem;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: var(--line-height-body);
 }
 
-.about-portrait {
-  margin: 0;
-}
-
-.about-portrait-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 999px 999px var(--radius-sm) var(--radius-sm);
+.about-profile-text p + p {
+  margin-top: 8px;
 }
 
 @media (min-width: 768px) {
-  .about-layout {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-    gap: 64px;
+  .about-profile-card {
     margin-top: 80px;
-    align-items: start;
+    padding: 40px;
   }
-  .about-layout:has(.about-portrait) {
-    grid-template-columns: minmax(180px, 240px) minmax(0, 1.1fr) minmax(0, 0.9fr);
+  .about-profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .about-profile-field + .about-profile-field {
+    padding-top: 0;
+    padding-left: 32px;
+    border-top: 0;
+    border-left: 1px solid var(--color-line);
   }
 }
 .skills-inner {
@@ -1319,6 +1263,168 @@ body.is-menu-open {
   }
   .skills-group-name {
     white-space: nowrap;
+  }
+}
+.career-inner {
+  min-width: 0;
+}
+
+.career-list {
+  max-width: 960px;
+  margin: 56px auto 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.career-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 0 0 40px 28px;
+}
+
+.career-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: -8px;
+  left: 3px;
+  width: 1px;
+  background-color: var(--color-line);
+}
+
+.career-item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-heading);
+}
+
+.career-item:last-child {
+  padding-bottom: 0;
+}
+
+.career-item:last-child::before {
+  display: none;
+}
+
+.career-period {
+  margin: 0;
+  color: var(--color-button);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.career-body {
+  min-width: 0;
+}
+
+.career-title {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+
+.career-text {
+  margin: 12px 0 0;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  line-height: var(--line-height-body);
+}
+
+@media (min-width: 768px) {
+  .career-list {
+    margin-top: 80px;
+  }
+  .career-item {
+    grid-template-columns: minmax(192px, 0.4fr) minmax(0, 1fr);
+    gap: 32px;
+    padding-left: 32px;
+    padding-bottom: 48px;
+  }
+  .career-item:last-child {
+    padding-bottom: 0;
+  }
+}
+.strengths-inner {
+  min-width: 0;
+}
+
+.strengths-heading {
+  font-size: clamp(2.25rem, 7.5vw, 4.75rem);
+}
+
+.strengths-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.strengths-item {
+  min-width: 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-line);
+}
+
+.strengths-number {
+  margin: 0;
+  color: var(--color-button);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.strengths-title {
+  margin: 10px 0 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 2.4vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+.strengths-label {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+
+.strengths-text {
+  margin: 12px 0 0;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: var(--line-height-body);
+}
+
+@media (min-width: 768px) {
+  .strengths-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 80px;
   }
 }
 .contact-inner {

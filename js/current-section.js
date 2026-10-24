@@ -1,8 +1,6 @@
 (() => {
   const navLinks = Array.from(document.querySelectorAll(".l-header-link"));
-  const sections = navLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter((section) => section instanceof HTMLElement);
+  const sections = Array.from(document.querySelectorAll("main > section[id]"));
   const header = document.querySelector(".l-header");
 
   const setCurrent = (id) => {
