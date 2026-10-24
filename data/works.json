@@ -1,0 +1,228 @@
+[
+  {
+    "slug": "morisita",
+    "title": "MORISITA",
+    "siteType": "企業サイト",
+    "productionType": "assignment",
+    "technologies": [
+      "html-css",
+      "wordpress"
+    ],
+    "image": "img/morisita.png",
+    "alt": "MORISITAのトップページ",
+    "scope": "静的サイトのコーディング、WordPressテーマ制作、カスタム投稿の実装",
+    "volume": "10ページ",
+    "period": "約1か月（静的サイト制作〜WordPress化）",
+    "background": "特殊ボルトナットメーカーの企業サイトです。静的コーディングとWordPressテーマ制作を担当しました。",
+    "points": [
+      "静的コーディングとWordPressテーマ制作を担当。",
+      "カスタム投稿を実装。"
+    ],
+    "published": false,
+    "siteUrl": "https://nmhr12.com/coding-task/morisita/"
+  },
+  {
+    "slug": "road-to-musha",
+    "title": "武者への道",
+    "siteType": "メディアサイト",
+    "productionType": "assignment",
+    "technologies": [
+      "wordpress"
+    ],
+    "image": "img/road-to-musha.png",
+    "alt": "武者への道のトップページ",
+    "scope": "既存の静的サイトのWordPress化（テーマ制作、ACFの実装）",
+    "volume": "10ページ",
+    "period": "2週間（WordPress化のみ）",
+    "background": "駆け出しデザイナー・エンジニアを応援するメディアサイトです。",
+    "points": [
+      "WordPressテーマ制作とACFの実装を担当。"
+    ],
+    "published": false,
+    "siteUrl": "https://road-to-musha.nmhr12.com/"
+  },
+  {
+    "slug": "supple",
+    "title": "SUPPLE",
+    "siteType": "カフェサイト",
+    "productionType": "assignment",
+    "technologies": [
+      "wordpress"
+    ],
+    "image": "img/supple.png",
+    "alt": "SUPPLEのトップページ",
+    "scope": "既存の静的サイトのWordPress化（テーマ制作、カスタム投稿・ACFの実装）",
+    "volume": "10ページ",
+    "period": "2週間（WordPress化のみ）",
+    "background": "コーヒーを扱うカフェのWordPressサイトです。",
+    "points": [
+      "WordPressテーマにカスタム投稿とACFを実装。"
+    ],
+    "published": false,
+    "siteUrl": "https://supple.nmhr12.com/"
+  },
+  {
+    "slug": "nexta",
+    "title": "NEXTA",
+    "siteType": "企業サイト",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript"
+    ],
+    "image": "img/nexta.png",
+    "alt": "NEXTAのトップページ",
+    "scope": "静的サイトのコーディング、レスポンシブ対応",
+    "volume": null,
+    "period": null,
+    "background": "中小企業のビジネスを支えるWeb制作会社のサイトです。",
+    "points": [
+      "PC・スマートフォンでの表示に対応した静的コーディング。"
+    ],
+    "published": false,
+    "siteUrl": null
+  },
+  {
+    "slug": "lucia",
+    "title": "Lucia",
+    "siteType": "クリニックサイト",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript"
+    ],
+    "image": "img/lucia.png",
+    "alt": "ルシア レディースクリニックのトップページ",
+    "scope": "静的サイトのコーディング、レスポンシブ対応",
+    "volume": null,
+    "period": null,
+    "background": "女性のライフステージに寄り添う婦人科クリニックのサイトです。",
+    "points": [
+      "PC・スマートフォンでの表示に対応した静的コーディング。"
+    ],
+    "published": false,
+    "siteUrl": null
+  },
+  {
+    "slug": "juicy-mama",
+    "title": "Juicy Mama",
+    "siteType": "コミュニティサイト（制作中）",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript"
+    ],
+    "image": "img/juicy-mama.png",
+    "alt": "ジューシーママのヒーロー。ヘッダーとファーストビューまで",
+    "scope": "ヘッダー・ヒーローの静的コーディング（制作中）",
+    "volume": null,
+    "period": null,
+    "background": "ママのコミュニティサイトです。静的サイト化の途中で、現在はヘッダーとヒーローまで実装しています。",
+    "points": [
+      "ヘッダーとヒーローまで静的コーディングを実施。"
+    ],
+    "published": false,
+    "siteUrl": null
+  },
+  {
+    "slug": "shemate-tohoku",
+    "title": "シーメイト東北部",
+    "siteType": "コミュニティサイト（制作予定）",
+    "productionType": "self",
+    "technologies": [],
+    "image": "img/shemate-tohoku.jpg",
+    "alt": "シーメイト東北部のデザイン画面。SHElikesコミュニティ東北部のファーストビュー",
+    "scope": "Figma AIのデザインデータをもとにコーディング予定（未着手）",
+    "volume": null,
+    "period": null,
+    "background": "SHElikesコミュニティ東北部向けのサイトです。デザインデータはあり、コーディングはこれから行う予定です。",
+    "points": [],
+    "published": false,
+    "siteUrl": null
+  },
+  {
+    "slug": "matsuyama-clinic",
+    "title": "Matsuyama Clinic",
+    "siteType": "クリニックサイト / 採用サイト",
+    "productionType": "assignment",
+    "technologies": [
+      "html-css"
+    ],
+    "image": "img/matsuyama-clinic.png",
+    "alt": "松山クリニック採用サイトのトップページ",
+    "scope": "採用サイトの静的コーディング、レスポンシブ対応",
+    "volume": "1ページ",
+    "period": "1週間",
+    "background": "松山クリニックの採用サイトです。ご挨拶、３つの特徴、インタビュー、新着情報、エントリーを1ページで掲載しています。メニューのトピックはエントリーへリンクしています。",
+    "points": [
+      "採用情報を1ページにまとめたレスポンシブ対応。",
+      "メニューからエントリーへ移動するページ内リンクを実装。"
+    ],
+    "published": false,
+    "siteUrl": "https://nmhr12.com/coding-task/matsuyama-clinic/"
+  },
+  {
+    "slug": "cafe-calmati",
+    "title": "Cafe Calmati",
+    "siteType": "カフェサイト",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript"
+    ],
+    "image": null,
+    "alt": null,
+    "scope": "デザインカンプからのコーディング、レスポンシブ対応",
+    "volume": null,
+    "period": null,
+    "background": "PCデザインをもとに、スマートフォン表示も合わせて制作したカフェサイトです。",
+    "points": [
+      "PCデザインをもとにスマートフォン表示を調整。"
+    ],
+    "published": false,
+    "siteUrl": null
+  },
+  {
+    "slug": "paisible",
+    "title": "Paisible",
+    "siteType": "オリジナルサイト",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript"
+    ],
+    "image": "img/paisible.png",
+    "alt": "Paisibleのトップページ",
+    "scope": "サイトのデザイン、コーディング、レスポンシブ対応",
+    "volume": null,
+    "period": null,
+    "background": "デザインからコーディングまで一貫して制作したサイトです。",
+    "points": [
+      "デザインからコーディング、レスポンシブ対応まで担当。"
+    ],
+    "published": false,
+    "siteUrl": "https://nmhr12.com/paisible/"
+  },
+  {
+    "slug": "sample-store",
+    "title": "Sample Store",
+    "siteType": "店舗サイト",
+    "productionType": "self",
+    "technologies": [
+      "html-css",
+      "javascript",
+      "wordpress"
+    ],
+    "image": "img/sample-store.png",
+    "alt": "地域のコンビニのトップページ",
+    "scope": "WordPressテーマの実装",
+    "volume": null,
+    "period": null,
+    "background": "地域のコンビニを想定した店舗サイトです。",
+    "points": [
+      "WordPressテーマの実装を担当。"
+    ],
+    "published": false,
+    "siteUrl": "https://jijisite.com/sample-store/"
+  }
+]
