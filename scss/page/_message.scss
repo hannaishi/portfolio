@@ -1,0 +1,37 @@
+@use "../foundation/variables" as *;
+
+.message-inner {
+  min-width: 0;
+}
+
+.message-copy {
+  max-width: 44em;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.message-text {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.message-text + .message-text {
+  margin-top: 20px;
+}
+
+.message-actions {
+  margin-top: 40px;
+}
+
+.message-actions .c-button {
+  gap: 16px;
+  max-width: 100%;
+}
+
+@media (min-width: $bp-md) {
+  .message-copy {
+    margin-top: 56px;
+  }
+}
